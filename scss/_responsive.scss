@@ -1,0 +1,56 @@
+// Aqui van los estilos con media query para dispositivos móviles, tablets y desktops.
+
+@media (max-width: 576px) {
+	.layout {
+		grid-template-columns: $layout-main !important;
+		padding: 0 !important;
+	}
+
+	.right-aside,
+	.left-aside {
+		display: none;
+	}
+
+	.content_post {
+		padding-left: 0 !important;
+	}
+
+	.body_post {
+		padding: 1rem 1rem 0.75rem !important;
+	}
+
+	.reactions_comments > span {
+		display: none;
+	}
+
+	.content_post__bottom_details_right > span {
+		display: none;
+	}
+}
+
+@media (max-width: 768px) {
+	.layout {
+		grid-template-columns: $layout-main !important;
+	}
+
+	.right-aside,
+	.left-aside {
+		display: none;
+	}
+}
+
+@media (max-width: 992px) {
+	.layout {
+		grid-template-columns: $layout-left $layout-main;
+	}
+
+	.left-aside {
+		display: none;
+	}
+}
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 1400px) {
+}

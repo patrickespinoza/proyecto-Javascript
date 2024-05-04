@@ -1,0 +1,57 @@
+.conteiner {
+    display: flex;
+    flex-direction: column;
+}
+
+.widget {
+    padding: 1rem;
+    border-bottom: 1px solid #7e7c7c;
+}
+.linklist {
+    display: flex;
+    flex-direction: column;
+}
+.acomm {
+    text-decoration: none;
+    color: rgb(42, 41, 41)
+    
+}
+
+.acomm:hover {
+    color: blue;
+}
+
+.alist {
+    margin: 0.5rem;
+    text-decoration: none;
+    color: #404040;
+    font-size: 1rem;
+    font-family: var(--ff-sans-serif);
+    transition: background-color 0.5s;
+    padding: 16px;
+}   
+
+.alist:hover {
+    background-color: $backgound-light;
+    color: blue;
+    border-radius: 8px;
+}
+
+.sidelink {
+    color: black;
+    text-decoration: none;
+    font-size: 1.25rem;
+}
+
+.subside {
+    color: #575757;
+}
+
+.subh4 {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, 'Courier New', Courier, monospace;
+    color: #171717;
+    font-size: 0.9rem;
+}
+.commentscont {
+    color: #717171;
+}

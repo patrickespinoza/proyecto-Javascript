@@ -1,0 +1,20 @@
+// Colocar aqui la declaracion de variables, mixins, funciones, etc que se repitan a lo largo de la web para reutilizarlas.
+
+$backgound: rgb(245, 245, 245);
+$backgound-light: #FFFFFF;
+$primary: #3B49DF;
+$primary-light: rgba(59, 73, 223, 0.1); //Uso para el hover del boton login
+$secondary: #242424;
+$text: #575757;
+$text-dark: #404040;
+
+$header-height: 56px;
+
+$site-width: 1280px;
+$layout-left: 240px;
+$layout-main: 2fr;
+$layout-right: 1fr;
+$layout-columns: $layout-left $layout-main $layout-right;
+$layout-padding: 1rem;
+$layout-gap: 1rem;
+$fs-base: 1rem;
