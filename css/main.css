@@ -217,6 +217,11 @@ header nav .container .logCreat button:hover a {
   color: white;
 }
 
+.navbar-background-light {
+  background-color: #FFFFFF;
+  border-bottom: rgb(200, 200, 200) 1px solid;
+}
+
 @media screen and (max-width: 780px) {
   .izq button {
     visibility: visible;
@@ -542,6 +547,10 @@ header nav .container .logCreat button:hover a {
 
 .commentscont {
   color: #717171;
+}
+
+.tag-wrapper a {
+  text-decoration: none;
 }
 
 .create-account-card {

@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg navbar-background-light mb-2 sticky-top">
         <div class="container-fluid">
             <img src="assets/logo.png" class="me-2" width="50" height="40" />
             <form class="d-flex" role="search">
@@ -24,9 +24,11 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+                <!-- Contenido dinamico comienza -->
+                <!-- Si el token de localstorage no esta disponible se muestra esto -->
                 <a class="btn btn-light mx-1">Log in</a>
                 <a class="btn btn-outline-primary mx-1">Create account</a>
-
+                <!-- Si el token de localstorage esta disponible se muestra esto  -->
                 <a class="btn btn-outline-primary mx-1">Create post</a>
                 <a class="nav-link active mx-1">&#128276;</a>
                 <img src="assets/generic-avatar.jpg" alt="" class="rounded-circle mx-1" width="40" height="40" />
@@ -184,17 +186,76 @@
 
                 <!-- Sidebar derecho -->
                 <div class="col-md-3 d-none d-md-block">
-                    <div class="card">
-                        <img src="..." class="card-img-top" alt="..." />
+                    <div class="card tag-wrapper" id="tag-wrapper-1">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">
-                                Some quick example text to build on the card title and make up
-                                the bulk of the card's content.
-                            </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <h6>random tag 1</h6>
+                                    <p>description, se genera dinamicamente a partir de la informacion de la base de datos, se muestran 5 items por tarjeta y se muestran dos tarjetas en este aside derecho</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="">tagged post title 1</a>
+                                    <p>${numero} comentarios</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="">tagged post title 2</a>
+                                    <p>${numero} comentarios</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="">tagged post title 3</a>
+                                    <p>${numero} comentarios</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="">tagged post title 4</a>
+                                    <p>${numero} comentarios</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="">tagged post title 5</a>
+                                    <p>${numero} comentarios</p>
+                                </li>
+                              </ul>
                         </div>
                     </div>
+                    <div class="card tag-wrapper mt-3" id="tag-wrapper-2">
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <h6>random tag 2</h6>
+                                    <p>description, se genera dinamicamente a partir de la informacion de la base de datos, se muestran 5 items por tarjeta y se muestran dos tarjetas en este aside derecho</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="">tagged post title 1</a>
+                                    <p>${numero} comentarios</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="">tagged post title 2</a>
+                                    <p>${numero} comentarios</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="">tagged post title 3</a>
+                                    <p>${numero} comentarios</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="">tagged post title 4</a>
+                                    <p>${numero} comentarios</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="">tagged post title 5</a>
+                                    <p>${numero} comentarios</p>
+                                </li>
+                              </ul>
+                        </div>
+                    </div>
+                        <div class="d-grid gap-2 p-0 mt-3" id="random-post-wrapper">
+                            <!-- el contenido de esta parte debe ser dinamico, basado en los distintos posts en la base de datos -->
+                            <h6>trending guides/resources</h6>
+                            <a class="btn btn-light text-start" href="">Titulo largo de un post que se va a trabajar con para que quede bien chidote ay nomaaas 👀🤓👍🏻</a>
+                                <a class="btn btn-light text-start" href="">Titulo largo de un post que se va a trabajar con para que quede bien chidote ay nomaaas 👀🤓👍🏻</a>
+                                <a class="btn btn-light text-start" href="">Titulo largo de un post que se va a trabajar con para que quede bien chidote ay nomaaas 👀🤓👍🏻</a>
+                                <a class="btn btn-light text-start" href="">Titulo largo de un post que se va a trabajar con para que quede bien chidote ay nomaaas 👀🤓👍🏻</a>
+                                <a class="btn btn-light text-start" href="">Titulo largo de un post que se va a trabajar con para que quede bien chidote ay nomaaas 👀🤓👍🏻</a>
+                                <a class="btn btn-light text-start" href="">Titulo largo de un post que se va a trabajar con para que quede bien chidote ay nomaaas 👀🤓👍🏻</a>
+                        </div>
                 </div>
             </div>
         </div>
