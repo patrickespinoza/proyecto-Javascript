@@ -1,158 +1,163 @@
 .create-account-card {
-    background-color: $backgound-light;
-    padding: 1rem;
-    border-radius: 8px;
-    border: 1px solid $primary-light;
-  
-    h2 {
-      color: $secondary;
-      font-size: 1.25rem;
-    }
-    p {
-      color: $text-dark;
-      font-size: $fs-base;
+  background-color: $backgound-light;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid $primary-light;
+
+  h2 {
+    color: $secondary;
+    font-size: 1.25rem;
+  }
+  p {
+    color: $text-dark;
+    font-size: $fs-base;
+  }
+}
+
+.create-account {
+  display: block;
+  background-color: $backgound-light;
+  color: $primary;
+  font-size: $fs-base;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border: 1px solid $primary;
+  border-radius: 4px;
+  margin-top: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+.create-account:hover {
+  display: block;
+  background-color: $primary;
+  color: $backgound-light;
+  font-size: $fs-base;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border: 1px solid $primary;
+  border-radius: 4px;
+  margin-top: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+.create-account-login {
+  display: block;
+  color: $text-dark;
+  font-size: $fs-base;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+.create-account-login:hover {
+  display: block;
+  color: $text-dark;
+  font-size: $fs-base;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  background-color: $primary-light;
+}
+
+.main-nav {
+  margin-top: $layout-gap;
+  background-color: $backgound;
+  ul {
+    list-style: none;
+    span {
+      margin-right: 10px;
     }
   }
-  
-  .create-account {
-    display: block;
-    background-color: $backgound-light;
+}
+
+.menu-item {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  display: block;
+  color: $text-dark;
+  font-size: $fs-base;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+.menu-item:hover {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  display: block;
+  color: $text-dark;
+  font-size: $fs-base;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  text-decoration: underline;
+  background-color: $primary-light;
+}
+
+.other-nav {
+  h2 {
+    color: $secondary;
+    font-size: 1.25rem;
+  }
+  margin-top: $layout-gap;
+  background-color: $backgound;
+  ul {
+    list-style: none;
+    span {
+      margin-right: 10px;
+    }
+  }
+}
+.social-media-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+
+  svg {
+    width: 24px;
+    height: 24px;
+    margin: 0 0.5rem;
+    fill: $secondary;
+    transition: fill 0.3s;
+  }
+  svg:hover {
+    fill: $primary;
+    background-color: $primary-light;
+    border-radius: 20%;
+  }
+}
+
+.popular-tags {
+  display: flex;
+  overflow-y: scroll;
+  height: 42vh;
+}
+
+.dev-community-tag {
+  margin: 1.5rem 0;
+}
+
+.last-part-aside {
+  p {
+    color: $text-dark;
+    font-size: $fs-base;
+    margin: 1rem 0;
+  }
+  a {
     color: $primary;
-    font-size: $fs-base;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    border: 1px solid $primary;
-    border-radius: 4px;
-    margin-top: 1rem;
-    cursor: pointer;
-    text-decoration: none;
-    text-align: center;
-  }
-  .create-account:hover {
-    display: block;
-    background-color: $primary;
-    color: $backgound-light;
-    font-size: $fs-base;
-    font-weight: bold;
-    padding: 0.5rem 1rem;
-    border: 1px solid $primary;
-    border-radius: 4px;
-    margin-top: 1rem;
-    cursor: pointer;
-    text-decoration: none;
-    text-align: center;
-  }
-  .create-account-login {
-    display: block;
-    color: $text-dark;
-    font-size: $fs-base;
-    padding: 0.5rem 1rem;
-    margin-top: 0.5rem;
-    cursor: pointer;
-    text-decoration: none;
-    text-align: center;
-  }
-  .create-account-login:hover {
-    display: block;
-    color: $text-dark;
-    font-size: $fs-base;
-    padding: 0.5rem 1rem;
-    margin-top: 0.5rem;
-    cursor: pointer;
-    text-decoration: none;
-    text-align: center;
-    background-color: $primary-light;
-  }
-  
-  .main-nav {
-    margin-top: $layout-gap;
-    background-color: $backgound;
-    ul {
-      list-style: none;
-      span {
-        margin-right: 10px;
-      }
-    }
-  }
-  
-  .menu-item {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    display: block;
-    color: $text-dark;
-    font-size: $fs-base;
-    padding: 0.5rem 1rem;
-    margin-top: 0.5rem;
-    cursor: pointer;
     text-decoration: none;
   }
-  .menu-item:hover {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    display: block;
-    color: $text-dark;
-    font-size: $fs-base;
-    padding: 0.5rem 1rem;
-    margin-top: 0.5rem;
-    cursor: pointer;
+  a:hover {
     text-decoration: underline;
-    background-color: $primary-light;
   }
-  
-  .other-nav {
-    h2 {
-      color: $secondary;
-      font-size: 1.25rem;
-    }
-    margin-top: $layout-gap;
-    background-color: $backgound;
-    ul {
-      list-style: none;
-      span {
-        margin-right: 10px;
-      }
-    }
-  }
-  .social-media-icons {
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-  
-    svg {
-      width: 24px;
-      height: 24px;
-      margin: 0 0.5rem;
-      fill: $secondary;
-      transition: fill 0.3s;
-    }
-    svg:hover {
-      fill: $primary;
-      background-color: $primary-light;
-      border-radius: 20%;
-    }
-  }
-  
-  .popular-tags {
-    display: flex;
-    overflow-y: scroll;
-    height: 42vh;
-  }
-  
-  .dev-community-tag {
-    margin: 1.5rem 0;
-  }
-  
-  .last-part-aside {
-    p {
-      color: $text-dark;
-      font-size: $fs-base;
-      margin: 1rem 0;
-    }
-    a {
-      color: $primary;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  }
+}
+
+#popular-tags {
+  overflow-y: scroll;
+  max-height: 400px;
+}
