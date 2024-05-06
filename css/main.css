@@ -46,6 +46,13 @@ footer {
   text-align: center;
 }
 
+.img-responsive {
+  height: auto;
+  width: auto;
+  max-height: 72px;
+  max-width: 250px;
+}
+
 @media (max-width: 576px) {
   .layout {
     grid-template-columns: 2fr !important;
@@ -695,4 +702,9 @@ header nav .container .logCreat button:hover a {
 }
 .last-part-aside a:hover {
   text-decoration: underline;
+}
+
+#popular-tags {
+  overflow-y: scroll;
+  max-height: 400px;
 }/*# sourceMappingURL=main.css.map */
