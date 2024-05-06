@@ -39,13 +39,16 @@
         <div class="container-fluid gap-3">
             <div class="row">
                 <div class="col-md-3 col-sm-3 d-none d-sm-block">
+                    <!-- Esta tarjeta tambien se debe generar de forma dinamica, solo debe aparecer con la verificacion del token de localstorage -->
                     <div class="card">
                         <div class="card-body">
                             <h5>
                                 DEV Community is a community of 1,448,555 amazing developers
                             </h5>
-                            <p>We're a place where coders share, stay up-to-date and grow their careers.</p>
-
+                            <p>
+                                We're a place where coders share, stay up-to-date and grow
+                                their careers.
+                            </p>
                         </div>
                         <div class="d-grid gap-2 p-3">
                             <a class="btn btn-outline-primary">Create account</a>
@@ -81,19 +84,20 @@
                                 </svg>
                             </a>
                             <a href="https://facebook.com/thepracticaldev" target="_blank"
-                                class="c-link c-link--icon-alone c-link--block " rel="noopener me">
+                                class="c-link c-link--icon-alone c-link--block" rel="noopener me">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     role="img" aria-labelledby="aqbax73ue91orkjiiav4nlhfhdizh33x"
                                     class="crayons-icon c-link__icon">
-                                    <title id="aqbax73ue91orkjiiav4nlhfhdizh33x">Facebook</title>
+                                    <title id="aqbax73ue91orkjiiav4nlhfhdizh33x">
+                                        Facebook
+                                    </title>
                                     <path
                                         d="M15.402 21v-6.966h2.333l.349-2.708h-2.682V9.598c0-.784.218-1.319 1.342-1.319h1.434V5.857a19.188 19.188 0 00-2.09-.107c-2.067 0-3.482 1.262-3.482 3.58v1.996h-2.338v2.708h2.338V21H4a1 1 0 01-1-1V4a1 1 0 011-1h16a1 1 0 011 1v16a1 1 0 01-1 1h-4.598z">
                                     </path>
                                 </svg>
-
                             </a>
                             <a href="https://github.com/forem" target="_blank"
-                                class="c-link c-link--icon-alone c-link--block " rel="noopener me">
+                                class="c-link c-link--icon-alone c-link--block" rel="noopener me">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     role="img" aria-labelledby="aly7iytz1shovgc2jdbfqq39h36f0qtv"
                                     class="crayons-icon c-link__icon">
@@ -104,18 +108,20 @@
                                 </svg>
                             </a>
                             <a href="https://instagram.com/thepracticaldev" target="_blank"
-                                class="c-link c-link--icon-alone c-link--block " rel="noopener me">
+                                class="c-link c-link--icon-alone c-link--block" rel="noopener me">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     role="img" aria-labelledby="ap6yk17oezh9pt0q1ktcrfgwq38snkwz"
                                     class="crayons-icon c-link__icon">
-                                    <title id="ap6yk17oezh9pt0q1ktcrfgwq38snkwz">Instagram</title>
+                                    <title id="ap6yk17oezh9pt0q1ktcrfgwq38snkwz">
+                                        Instagram
+                                    </title>
                                     <path
                                         d="M12 2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153.509.5.902 1.105 1.153 1.772.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 01-1.153 1.772c-.5.508-1.105.902-1.772 1.153-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 01-1.772-1.153 4.904 4.904 0 01-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 011.153-1.772A4.897 4.897 0 015.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2zm0 5a5 5 0 100 10 5 5 0 000-10zm6.5-.25a1.25 1.25 0 10-2.5 0 1.25 1.25 0 002.5 0zM12 9a3 3 0 110 6 3 3 0 010-6z">
                                     </path>
                                 </svg>
                             </a>
                             <a href="https://twitch.com/thepracticaldev" target="_blank"
-                                class="c-link c-link--icon-alone c-link--block " rel="noopener me">
+                                class="c-link c-link--icon-alone c-link--block" rel="noopener me">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     role="img" aria-labelledby="ak1qqne22ags22a7ge2yklaolp9r7n7l"
                                     class="crayons-icon c-link__icon">
@@ -130,58 +136,126 @@
                     <div class="d-grid gap-2 p-0 mt-3" id="popular-tags">
                         <!-- el contenido de esta parte debe ser dinamico, basado en las distintas tags en la base de datos -->
                         <h6>Popular tags</h6>
-                        <a class="btn btn-light text-start" href="">#webdev</  a>
-                            <a class="btn btn-light text-start" href="">#javascript</a>
-                            <a class="btn btn-light text-start" href="">#beginners</a>
-                            <a class="btn btn-light text-start" href="">#programming</a>
-                            <a class="btn btn-light text-start" href="">#tutorial</a>
-                            <a class="btn btn-light text-start" href="">#react</a>
-                            <a class="btn btn-light text-start" href="">#python</a>
-                            <a class="btn btn-light text-start" href="">#ai</a>
-                            <a class="btn btn-light text-start" href="">#devops</a>
-                            <a class="btn btn-light text-start" href="">#productivity</a>
-                            <a class="btn btn-light text-start" href="">#aws</a>
-                            <a class="btn btn-light text-start" href="">#opensource</a>
-                            <a class="btn btn-light text-start" href="">#discuss</a>
-                            <a class="btn btn-light text-start" href="">#css</a>
-                            <a class="btn btn-light text-start" href="">#node</a>
-                            <a class="btn btn-light text-start" href="">#typescript</a>
-                            <a class="btn btn-light text-start" href="">#machinelearning</a>
-                            <a class="btn btn-light text-start" href="">#career</a>
-                            <a class="btn btn-light text-start" href="">#java</a>
-                            <a class="btn btn-light text-start" href="">#learning</a>
-                            <a class="btn btn-light text-start" href="">#news</a>
-                            <a class="btn btn-light text-start" href="">#datascience</a>
-                            <a class="btn btn-light text-start" href="">#php</a>
-                            <a class="btn btn-light text-start" href="">#security</a>
-                            <a class="btn btn-light text-start" href="">#html</a>
-                            <a class="btn btn-light text-start" href="">#database</a>
-                            <a class="btn btn-light text-start" href="">#coding</a>
-                            <a class="btn btn-light text-start" href="">#testing</a>
-                            <a class="btn btn-light text-start" href="">#api</a>
-                            <a class="btn btn-light text-start" href="">#github</a>
+                        <a class="btn btn-light text-start" href="">tag 0</a>
+                        <a href="" class="btn btn-light text-start">tag 1</a>
+                        <a href="" class="btn btn-light text-start">tag 2</a>
+                        <a href="" class="btn btn-light text-start">tag 3</a>
+                        <a href="" class="btn btn-light text-start">tag 4</a>
+                        <a href="" class="btn btn-light text-start">tag 5</a>
+                        <a href="" class="btn btn-light text-start">tag 6</a>
+                        <a href="" class="btn btn-light text-start">tag 7</a>
+                        <a href="" class="btn btn-light text-start">tag 8</a>
+                        <a href="" class="btn btn-light text-start">tag 9</a>
+                        <a href="" class="btn btn-light text-start">tag 10</a>
+                        <a href="" class="btn btn-light text-start">tag 11</a>
+                        <a href="" class="btn btn-light text-start">tag 12</a>
+                        <a href="" class="btn btn-light text-start">tag 13</a>
+                        <a href="" class="btn btn-light text-start">tag 14</a>
+                        <a href="" class="btn btn-light text-start">tag 15</a>
                     </div>
-                
+
                     <div class="container my-3">
-                        <p>DEV Community – A constructive and inclusive social network for software developers. With
-                            you every step of your journey.</p> 
+                        <p>
+                            DEV Community – A constructive and inclusive social network for
+                            software developers. With you every step of your journey.
+                        </p>
                     </div>
                 </div>
 
-
                 <!-- Contenido principal -->
+                <!-- Aqui todo el contenido sera dinamico
+                La primera tarjeta lleva los siguientes elementos:
+                - Imagen
+                - Autor
+                - Fecha de publicacion
+                - Titulo
+                - Tags
+                - numero de comentarios[si no tiene comentarios no se muestra]
+                - numero de reacciones[si no tiene racciones no se muestra]
+                - tiempo estimado de lectura
+                - boton de bookmark
+                -->
                 <div class="col-md-6 col-sm-9">
-                    <div class="card">
-                        <img src="..." class="card-img-top" alt="..." />
+                    <div class="card mb-3">
+                        <img src="https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fw19259c6raar2ple6904.png"
+                            class="card-img-top" alt="..." />
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">
-                                Some quick example text to build on the card title and make up
-                                the bulk of the card's content.
-                            </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <div class="d-flex">
+                                <img src="assets/generic-avatar.jpg" alt="" class="rounded-circle  me-3" width="40"
+                                    height="40" />
+
+                                <div class="d-flex flex-column">
+                                    <a class="card-subtitle mb-2 text-muted text-start">Author</a>
+                                    <a class="">date</a>
+                                </div>
+                            </div>
+                            <a class="card-title post-title ">Post title</a>
+                            <div class="d-flex">
+                                <a class="btn btn-light">tag 1</a>
+                                <a class="btn btn-light">tag 2</a>
+                                <a class="btn btn-light">tag 3</a>
+                            </div>
+                            <div class="d-flex">
+                                <a class="btn btn-light">Reactions(solo si hay)</a>
+                                <a class="btn btn-light me-auto">comments(solo si hay)</a>
+                                <span>{n} minute read</span>
+                                <a class="btn btn-light">🔖</a>
+                            </div>
                         </div>
                     </div>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="d-flex">
+                                <img src="assets/generic-avatar.jpg" alt="" class="rounded-circle  me-3" width="40"
+                                    height="40" />
+
+                                <div class="d-flex flex-column">
+                                    <a class="card-subtitle mb-2 text-muted text-start">Author</a>
+                                    <a class="">date</a>
+                                </div>
+                            </div>
+                            <a class="card-title post-title ">Post title</a>
+                            <div class="d-flex">
+                                <a class="btn btn-light">tag 1</a>
+                                <a class="btn btn-light">tag 2</a>
+                                <a class="btn btn-light">tag 3</a>
+                            </div>
+                            <div class="d-flex">
+                                <a class="btn btn-light">Reactions(solo si hay)</a>
+                                <a class="btn btn-light me-auto">comments(solo si hay)</a>
+                                <span>{n} minute read</span>
+                                <a class="btn btn-light">🔖</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="d-flex">
+                                <img src="assets/generic-avatar.jpg" alt="" class="rounded-circle  me-3" width="40"
+                                    height="40" />
+
+                                <div class="d-flex flex-column">
+                                    <a class="card-subtitle mb-2 text-muted text-start">Author</a>
+                                    <a class="">date</a>
+                                </div>
+                            </div>
+                            <a class="card-title post-title ">Post title</a>
+                            <div class="d-flex">
+                                <a class="btn btn-light">tag 1</a>
+                                <a class="btn btn-light">tag 2</a>
+                                <a class="btn btn-light">tag 3</a>
+                            </div>
+                            <div class="d-flex">
+                                <a class="btn btn-light">Reactions(solo si hay)</a>
+                                <a class="btn btn-light me-auto">comments(solo si hay)</a>
+                                <span>{n} minute read</span>
+                                <a class="btn btn-light">🔖</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
                 </div>
 
                 <!-- Sidebar derecho -->
@@ -191,7 +265,11 @@
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">
                                     <h6>random tag 1</h6>
-                                    <p>description, se genera dinamicamente a partir de la informacion de la base de datos, se muestran 5 items por tarjeta y se muestran dos tarjetas en este aside derecho</p>
+                                    <p>
+                                        description, se genera dinamicamente a partir de la
+                                        informacion de la base de datos, se muestran 5 items por
+                                        tarjeta y se muestran dos tarjetas en este aside derecho
+                                    </p>
                                 </li>
                                 <li class="list-group-item">
                                     <a href="">tagged post title 1</a>
@@ -213,7 +291,7 @@
                                     <a href="">tagged post title 5</a>
                                     <p>${numero} comentarios</p>
                                 </li>
-                              </ul>
+                            </ul>
                         </div>
                     </div>
                     <div class="card tag-wrapper mt-3" id="tag-wrapper-2">
@@ -221,7 +299,11 @@
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">
                                     <h6>random tag 2</h6>
-                                    <p>description, se genera dinamicamente a partir de la informacion de la base de datos, se muestran 5 items por tarjeta y se muestran dos tarjetas en este aside derecho</p>
+                                    <p>
+                                        description, se genera dinamicamente a partir de la
+                                        informacion de la base de datos, se muestran 5 items por
+                                        tarjeta y se muestran dos tarjetas en este aside derecho
+                                    </p>
                                 </li>
                                 <li class="list-group-item">
                                     <a href="">tagged post title 1</a>
@@ -243,24 +325,36 @@
                                     <a href="">tagged post title 5</a>
                                     <p>${numero} comentarios</p>
                                 </li>
-                              </ul>
+                            </ul>
                         </div>
                     </div>
-                        <div class="d-grid gap-2 p-0 mt-3" id="random-post-wrapper">
-                            <!-- el contenido de esta parte debe ser dinamico, basado en los distintos posts en la base de datos -->
-                            <h6>trending guides/resources</h6>
-                            <a class="btn btn-light text-start" href="">Titulo largo de un post que se va a trabajar con para que quede bien chidote ay nomaaas 👀🤓👍🏻</a>
-                                <a class="btn btn-light text-start" href="">Titulo largo de un post que se va a trabajar con para que quede bien chidote ay nomaaas 👀🤓👍🏻</a>
-                                <a class="btn btn-light text-start" href="">Titulo largo de un post que se va a trabajar con para que quede bien chidote ay nomaaas 👀🤓👍🏻</a>
-                                <a class="btn btn-light text-start" href="">Titulo largo de un post que se va a trabajar con para que quede bien chidote ay nomaaas 👀🤓👍🏻</a>
-                                <a class="btn btn-light text-start" href="">Titulo largo de un post que se va a trabajar con para que quede bien chidote ay nomaaas 👀🤓👍🏻</a>
-                                <a class="btn btn-light text-start" href="">Titulo largo de un post que se va a trabajar con para que quede bien chidote ay nomaaas 👀🤓👍🏻</a>
-                        </div>
+                    <div class="d-grid gap-2 p-0 mt-3" id="random-post-wrapper">
+                        <!-- el contenido de esta parte debe ser dinamico, basado en los distintos posts en la base de datos -->
+                        <h6>trending guides/resources</h6>
+                        <a class="btn btn-light text-start" href="">Titulo largo de un post que se va a trabajar con
+                            para que quede
+                            bien chidote ay nomaaas 👀🤓👍🏻</a>
+                        <a class="btn btn-light text-start" href="">Titulo largo de un post que se va a trabajar con
+                            para que quede
+                            bien chidote ay nomaaas 👀🤓👍🏻</a>
+                        <a class="btn btn-light text-start" href="">Titulo largo de un post que se va a trabajar con
+                            para que quede
+                            bien chidote ay nomaaas 👀🤓👍🏻</a>
+                        <a class="btn btn-light text-start" href="">Titulo largo de un post que se va a trabajar con
+                            para que quede
+                            bien chidote ay nomaaas 👀🤓👍🏻</a>
+                        <a class="btn btn-light text-start" href="">Titulo largo de un post que se va a trabajar con
+                            para que quede
+                            bien chidote ay nomaaas 👀🤓👍🏻</a>
+                        <a class="btn btn-light text-start" href="">Titulo largo de un post que se va a trabajar con
+                            para que quede
+                            bien chidote ay nomaaas 👀🤓👍🏻</a>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
