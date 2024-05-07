@@ -183,11 +183,22 @@ header nav .container .logCreat {
   align-items: center;
 }
 header nav .container .logCreat .uno {
-  color: black;
+  display: block;
+  color: #404040;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
 }
 header nav .container .logCreat .uno:hover {
-  text-decoration: underline;
-  color: rgb(59, 73, 223);
+  display: block;
+  color: #404040;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
 }
 header nav .container .logCreat a {
   border-radius: 10px;

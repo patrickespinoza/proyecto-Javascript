@@ -110,13 +110,27 @@ header {
 				flex-direction: row;
 				align-items: center;
 				.uno {
-					color: black;
+					display: block;
+                    color: $text-dark;
+                    font-size: $fs-base;
+                    padding: 0.5rem 1rem;
+                    
+                    cursor: pointer;
+                    text-decoration: none;
+                    text-align: center;
 					
 				}
 
 				.uno:hover {
-					text-decoration: underline;
-					color: rgb(59, 73, 223);
+					display: block;
+    color: $text-dark;
+    font-size: $fs-base;
+    padding: 0.5rem 1rem;
+  
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    
 				}
 
 				a {
