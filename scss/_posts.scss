@@ -7,5 +7,22 @@
   font-size: 2rem;
   text-decoration: none;
   font-weight: bolder;
-  color: $primary-color;
+  color: $primary;
+}
+
+.post-filters {
+  a {
+    color: $text-dark;
+    text-decoration: none;
+  }
+  div:hover {
+    border: 1px solid $primary-light;
+    background-color: $backgound-light;
+    border-radius: 10%;
+
+    a {
+      color: $primary;
+      font-weight: bold;
+    }
+  }
 }

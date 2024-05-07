@@ -18,20 +18,20 @@
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
             </form>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria 1-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="post-login-buttons"></ul>
                 <!-- Contenido dinamico comienza -->
                 <!-- Si el token de localstorage no esta disponible se muestra esto -->
-                <a class="btn btn-light mx-1">Log in</a>
-                <a class="btn btn-outline-primary mx-1">Create account</a>
+                <a class="btn btn-light mx-1" id = "log-in-btn">Log in</a>
+                <a class="btn btn-outline-primary mx-1" id="create-account-btn">Create account</a>
                 <!-- Si el token de localstorage esta disponible se muestra esto  -->
-                <a class="btn btn-outline-primary mx-1">Create post</a>
-                <a class="nav-link active mx-1">&#128276;</a>
-                <img src="assets/generic-avatar.jpg" alt="" class="rounded-circle mx-1" width="40" height="40" />
+                <a class="btn btn-outline-primary mx-1" id="create-post-btn">Create post</a>
+                <a class="nav-link active mx-1" id="alert-bell">&#128276;</a>
+                <img src="assets/generic-avatar.jpg" alt="" class="rounded-circle mx-1" width="40" height="40" id="user-avatar" />
             </div>
         </div>
     </nav>
@@ -40,7 +40,7 @@
             <div class="row">
                 <div class="col-md-3 col-sm-3 d-none d-sm-block">
                     <!-- Esta tarjeta tambien se debe generar de forma dinamica, solo debe aparecer con la verificacion del token de localstorage -->
-                    <div class="card">
+                    <div class="card" id="login-card">
                         <div class="card-body">
                             <h5>
                                 DEV Community is a community of 1,448,555 amazing developers
@@ -136,22 +136,6 @@
                     <div class="d-grid gap-2 p-0 mt-3" id="popular-tags">
                         <!-- el contenido de esta parte debe ser dinamico, basado en las distintas tags en la base de datos -->
                         <h6>Popular tags</h6>
-                        <a class="btn btn-light text-start" href="">tag 0</a>
-                        <a href="" class="btn btn-light text-start">tag 1</a>
-                        <a href="" class="btn btn-light text-start">tag 2</a>
-                        <a href="" class="btn btn-light text-start">tag 3</a>
-                        <a href="" class="btn btn-light text-start">tag 4</a>
-                        <a href="" class="btn btn-light text-start">tag 5</a>
-                        <a href="" class="btn btn-light text-start">tag 6</a>
-                        <a href="" class="btn btn-light text-start">tag 7</a>
-                        <a href="" class="btn btn-light text-start">tag 8</a>
-                        <a href="" class="btn btn-light text-start">tag 9</a>
-                        <a href="" class="btn btn-light text-start">tag 10</a>
-                        <a href="" class="btn btn-light text-start">tag 11</a>
-                        <a href="" class="btn btn-light text-start">tag 12</a>
-                        <a href="" class="btn btn-light text-start">tag 13</a>
-                        <a href="" class="btn btn-light text-start">tag 14</a>
-                        <a href="" class="btn btn-light text-start">tag 15</a>
                     </div>
 
                     <div class="container my-3">
@@ -176,6 +160,11 @@
                 - boton de bookmark
                 -->
                 <div class="col-md-6 col-sm-9">
+                    <div class="d-flex flex-row mb-1 post-filters">
+                        <div class="p-2"><a href="">Relevant</a></div>
+                        <div class="p-2"><a href="">Latest</a></div>
+                        <div class="p-2"><a href="">Top</a></div>
+                      </div>
                     <div class="card mb-3">
                         <img src="https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fw19259c6raar2ple6904.png"
                             class="card-img-top" alt="..." />

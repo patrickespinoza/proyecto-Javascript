@@ -722,4 +722,25 @@ header nav .container .logCreat button:hover a {
   font-size: 2rem;
   text-decoration: none;
   font-weight: bolder;
+}
+
+.post-title:hover {
+  font-size: 2rem;
+  text-decoration: none;
+  font-weight: bolder;
+  color: #3B49DF;
+}
+
+.post-filters a {
+  color: #404040;
+  text-decoration: none;
+}
+.post-filters div:hover {
+  border: 1px solid rgba(59, 73, 223, 0.1);
+  background-color: #FFFFFF;
+  border-radius: 10%;
+}
+.post-filters div:hover a {
+  color: #3B49DF;
+  font-weight: bold;
 }/*# sourceMappingURL=main.css.map */
