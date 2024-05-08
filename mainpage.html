@@ -13,8 +13,8 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-background-light mb-2 sticky-top">
         <div class="container-fluid">
-            <a href="mainpage.html"><img src="assets/logo.png" class="me-2" width="50" height="40" /></a>
-            <form class="d-flex" role="search">
+            <a href="mainpage.html"><img src="assets/logo.png" class="me-2" width="50" height="40" />
+                <form class="d-flex" role="search"></a>
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search-bar"/>
             </form>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -26,12 +26,10 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="post-login-buttons"></ul>
                 <!-- Contenido dinamico comienza -->
                 <!-- Si el token de localstorage no esta disponible se muestra esto -->
-
-                <a class="btn btn-light mx-1" href="view/LoginForm.html" id="login">Log in</a>
-                <a class="btn btn-outline-primary mx-1" href="view/LoginForm.html" id="create-account-btn">Create account</a
-               
+                <a class="btn btn-light mx-1" id="log-in-btn" href="/view/LoginForm.html">Log in</a>
+                <a class="btn btn-outline-primary mx-1"  id="create-account-btn">Create account</a>
                 <!-- Si el token de localstorage esta disponible se muestra esto  -->
-                <a class="btn btn-outline-primary mx-1" id="create-post-btn">Create post</a>
+                <a class="btn btn-outline-primary mx-1" href="post.html" id="create-post-btn">Create post</a>
                 <a class="nav-link active mx-1" id="alert-bell">&#128276;</a>
                 <img src="assets/generic-avatar.jpg" alt="" class="rounded-circle mx-1" width="40" height="40"
                     id="user-avatar" />
@@ -43,8 +41,7 @@
             <div class="row">
                 <div class="col-md-3 col-sm-3 d-none d-sm-block">
                     <!-- Esta tarjeta tambien se debe generar de forma dinamica, solo debe aparecer con la verificacion del token de localstorage -->
-                    <div class="card" id="loginright">
-                   
+                    <div class="card" id="login-card">
                         <div class="card-body">
                             <h5>
                                 DEV Community is a community of 1,448,555 amazing developers
@@ -60,24 +57,24 @@
                         </div>
                     </div>
                     <div class="d-grid gap-2 p-0 mt-3">
-                        <a class="btn btn-light text-start" href="#">🏠Home</a>
-                        <a class="btn btn-light text-start" href="#">🎙️Podcasts</a>
-                        <a class="btn btn-light text-start" href="#">🎥Videos</a>
-                        <a class="btn btn-light text-start" href="#">🏷️Tags</a>
-                        <a class="btn btn-light text-start" href="#">🆘DEV Help</a>
-                        <a class="btn btn-light text-start" href="#">🛍️Forem Shop</a>
-                        <a class="btn btn-light text-start" href="#">❤️Advertise on DEV</a>
-                        <a class="btn btn-light text-start" href="#">✨DEV Showcase</a>
-                        <a class="btn btn-light text-start" href="#">🆎About</a>
-                        <a class="btn btn-light text-start" href="#">📯Contact</a>
-                        <a class="btn btn-light text-start" href="#">📖Guides</a>
-                        <a class="btn btn-light text-start" href="#">🤔Software comparisons</a>
+                        <a class="btn btn-light text-start" href="mainpage.html">🏠Home</a>
+                        <a class="btn btn-light text-start" href="mainpage.html">🎙️Podcasts</a>
+                        <a class="btn btn-light text-start" href="mainpage.html">🎥Videos</a>
+                        <a class="btn btn-light text-start" href="mainpage.html">🏷️Tags</a>
+                        <a class="btn btn-light text-start" href="mainpage.html">🆘DEV Help</a>
+                        <a class="btn btn-light text-start" href="mainpage.html">🛍️Forem Shop</a>
+                        <a class="btn btn-light text-start" href="mainpage.html">❤️Advertise on DEV</a>
+                        <a class="btn btn-light text-start" href="mainpage.html">✨DEV Showcase</a>
+                        <a class="btn btn-light text-start" href="mainpage.html">🆎About</a>
+                        <a class="btn btn-light text-start" href="mainpage.html">📯Contact</a>
+                        <a class="btn btn-light text-start" href="mainpage.html">📖Guides</a>
+                        <a class="btn btn-light text-start" href="mainpage.html">🤔Software comparisons</a>
                     </div>
                     <div class="d-grid gap-2 p-0 mt-3">
                         <h6>Other</h6>
-                        <a class="btn btn-light text-start" href="#">👍🏻Code of conduct</a>
-                        <a class="btn btn-light text-start" href="#">🤓Privacy Policy</a>
-                        <a class="btn btn-light text-start" href="#">👀Terms of use</a>
+                        <a class="btn btn-light text-start" href="mainpage.html">👍🏻Code of conduct</a>
+                        <a class="btn btn-light text-start" href="mainpage.html">🤓Privacy Policy</a>
+                        <a class="btn btn-light text-start" href="mainpage.html">👀Terms of use</a>
                     </div>
                     <div class="d-grid">
                         <div class="social-media-icons">
@@ -168,8 +165,8 @@
                 -->
                 <div class="col-md-6 col-sm-9">
                     <div class="d-flex flex-row mb-1 post-filters">
-                        <div class="p-2"><a id="relevant-post-sorter" href="">Relevant</a></div>
-                        <div class="p-2"><a id="latest-post-sorter" href="">Latest</a></div>
+                        <div class="p-2"><a id="relevant-post-sorter" href=".">Relevant</a></div>
+                        <div class="p-2"><a id="latest-post-sorter" href=".">Latest</a></div>
                         <div class="p-2"><a id="top-post-sorter" href="">Top</a></div>
                     </div>
                     <div id="post-wrapper">
@@ -303,11 +300,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-
     <script src="/js/main.js" type="module"></script>
-    <script>
-        window.location.replace("./mainpage.html");
-    </script>
+    
 </body>
 
 </html>

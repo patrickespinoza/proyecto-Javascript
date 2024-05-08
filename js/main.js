@@ -2,21 +2,24 @@ import { loginPostButtonsRender } from "./modules/mainpage/detectLogin.js";
 
 import { renderPopularTags } from "./modules/mainpage/printPopularTags.js";
 
-import { posts } from "./modules/mainpage/datosPosts.js";
-
+//import { posts } from "./modules/mainpage/datosPosts.js";
+let posts = await fetchAllPosts();
+//ya toma los datos de la base de datos ya no del dummy
 import { printTaggedPostList } from "./modules/mainpage/taggedPostList.js";
 
 import { createPostList, printPostCards} from "./modules/mainpage/postCards.js";
 
-import { getTopPosts, printTrendingPosts } from "./modules/mainpage/trendingPosts.js";
+import { getTopPosts, printTrendingPosts, sortPostsByRating } from "./modules/mainpage/trendingPosts.js";
 
 import { getRelevantPosts } from "./modules/mainpage/getRelevantPosts.js";
 
 import { getLatestPosts } from "./modules/mainpage/getLatestPosts.js";
 
+import { createPost, fetchPostByKey, fetchAllPosts, deletePost}  from "./modules/databaseApi.js";
+
 //se crea variable token que obtiene el token del local storage
-//let token = localStorage.getItem("token");
-const token = true; // Token simulado para propositos de prueba
+let token = localStorage.getItem("token");
+//const token = false; // Token simulado para propositos de prueba
 
 
 
@@ -25,7 +28,7 @@ Ejemplo de uso de la variable token en otro archivo:
 let token = localStorage.getItem("token");
 
 token
-  ? window.open("../views/products.html", "_self")
+  ? window.open("../views/posts.html", "_self")
   : window.open("../views/loginForm.html", "_self");
  */
 
@@ -43,21 +46,21 @@ printTrendingPosts(posts, "trending-post-wrapper");
 let relevantPostSorter = document.getElementById("relevant-post-sorter");
 relevantPostSorter.addEventListener("click", (event) => {
   event.preventDefault();
-  const postList = getRelevantPosts(posts);
+  const postList = createPostList(getRelevantPosts(posts));
   printPostCards(postList, "post-wrapper");
 });
 
 let latestPostSorter = document.getElementById("latest-post-sorter");
 latestPostSorter.addEventListener("click", (event) => {
   event.preventDefault();
-  const postList = getLatestPosts(posts);
+  const postList = createPostList(getLatestPosts(posts));
   printPostCards(postList, "post-wrapper");
 });
 
 let topPostSorter = document.getElementById("top-post-sorter");
 topPostSorter.addEventListener("click", (event) => {
   event.preventDefault();
-  const postList = createPostList(getTopPosts(posts));
+  const postList = createPostList(sortPostsByRating(posts));
   printPostCards(postList,"post-wrapper");
 });
 

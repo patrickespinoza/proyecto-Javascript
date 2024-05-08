@@ -1,8 +1,8 @@
 const getRelevantPosts = (posts) => {
-    let relevantPosts = [];
+    let relevantPosts = {};
     for (let post in posts) {
         if (posts[post].relevant) {
-            relevantPosts.push(posts[post]);
+            relevantPosts[post] = posts[post];
         }
     }
     return relevantPosts;
