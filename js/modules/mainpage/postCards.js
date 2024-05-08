@@ -212,14 +212,12 @@ let createOtherPostCards = (post) => {
 
 //convierto el objeto posts en un array de posts
 const createPostList = (posts) => {
-    let postList = [];
-    for (let post in posts) {
-        postList.push(posts[post]);
-    }
+    let postKeys = Object.keys(posts);
+    let postList = postKeys.map((key) => {
+        return { ...posts[key], key };
+      });
     return postList;
 }
-//console.log(createPostList(posts));
-
 
 
 const printPostCards = (posts, wrapperId) => {
@@ -230,4 +228,4 @@ const printPostCards = (posts, wrapperId) => {
         postWrapper.appendChild(createOtherPostCards(posts[i]));
 }}
 
-export { createPostList, printPostCards };
+export { createPostList, printPostCards};
