@@ -1,11 +1,17 @@
 const getTopPosts = (posts) => {
-    let trendingPosts = {};
+    let trendingPosts = [];
     for (let post in posts) {
         if (posts[post].rating >= 4) {
             trendingPosts[post] = posts[post];
         }
     }
     return trendingPosts;
+};
+const sortPostsByRating = (posts) => {
+    let postsArray = Object.keys(posts).map((key) => {
+        return posts[key];
+    });
+    return postsArray.sort((a, b) => b.rating - a.rating);
 };
 
 const getKeyTopPosts = (posts) => {
@@ -40,4 +46,4 @@ const printTrendingPosts = (posts, containerId) => {
 
 }
 
-export { getTopPosts, printTrendingPosts };
+export { getTopPosts, printTrendingPosts, sortPostsByRating };
