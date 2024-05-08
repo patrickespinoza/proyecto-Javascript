@@ -1,18 +1,18 @@
-import { loginPostButtonsRender } from "./mainpage/detectLogin.js";
+import { loginPostButtonsRender } from "./modules/mainpage/detectLogin.js";
 
-import { renderPopularTags } from "./mainpage/printPopularTags.js";
+import { renderPopularTags } from "./modules/mainpage/printPopularTags.js";
 
-import { posts } from "./mainpage/datosPosts.js";
+import { posts } from "./modules/mainpage/datosPosts.js";
 
-import { printTaggedPostList } from "./mainpage/taggedPostList.js";
+import { printTaggedPostList } from "./modules/mainpage/taggedPostList.js";
 
-import { createPostList, printPostCards } from "./mainpage/postCards.js";
+import { createPostList, printPostCards } from "./modules/mainpage/postCards.js";
 
-import { getTopPosts, printTrendingPosts } from "./mainpage/trendingPosts.js";
+import { getTopPosts, printTrendingPosts } from "./modules/mainpage/trendingPosts.js";
 
-import { getRelevantPosts } from "./mainpage/getRelevantPosts.js";
+import { getRelevantPosts } from "./modules/mainpage/getRelevantPosts.js";
 
-import { getLatestPosts } from "./mainpage/getLatestPosts.js";
+import { getLatestPosts } from "./modules/mainpage/getLatestPosts.js";
 
 //se crea variable token que obtiene el token del local storage
 //let token = localStorage.getItem("token");
@@ -78,6 +78,8 @@ topPostSorter.addEventListener("click", (event) => {
 });
 
 
+let postKeys = Object.keys(posts);
+console.log(postKeys);
 
 let filterInput = document.getElementById("search-bar");
 filterInput.addEventListener("keyup", (event) => {
