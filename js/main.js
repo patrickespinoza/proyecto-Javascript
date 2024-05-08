@@ -5,7 +5,7 @@ import { renderPopularTags } from "./modules/mainpage/printPopularTags.js";
 //import { posts } from "./modules/mainpage/datosPosts.js";
 let posts = await fetchAllPosts();
 //ya toma los datos de la base de datos ya no del dummy
-import { printTaggedPostList } from "./modules/mainpage/taggedPostList.js";
+import { printTaggedPostList, filterByTag } from "./modules/mainpage/taggedPostList.js";
 
 import { createPostList, printPostCards} from "./modules/mainpage/postCards.js";
 
@@ -64,7 +64,16 @@ topPostSorter.addEventListener("click", (event) => {
   printPostCards(postList,"post-wrapper");
 });
 
-
+let filterByTagInput = document.querySelectorAll('[href^="?tag="]');
+filterByTagInput.forEach((tag) => {
+  tag.addEventListener("click", (event) => {
+    event.preventDefault();
+    console.log("click");
+    let tag = event.target.textContent.slice(1);
+    let filteredPosts = filterByTag(tag, posts);
+    printPostCards(filteredPosts, "post-wrapper");
+  });
+});
 
 let filterInput = document.getElementById("search-bar");
 filterInput.addEventListener("keyup", (event) => {
@@ -81,4 +90,15 @@ filterInput.addEventListener("keyup", (event) => {
   printPostCards(result, "post-wrapper");
 });
 
-printPostCards(createPostList(posts), "post-wrapper");
+
+// procedimiento para filtrar posts por tags
+
+/* 
+Defino que tag quiero filtrar
+Verifico en mi lista de posts si el tag que quiero filtrar está en la lista de tags de cada post
+Si está, lo agrego a una lista de posts filtradosadada
+Regreso la lista de posts filtrados
+
+*/
+
+printPostCards(createPostList(posts), "post-wrapper")

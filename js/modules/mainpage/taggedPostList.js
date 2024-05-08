@@ -96,4 +96,17 @@ const printTaggedPostList = (tag, posts, wrapperId) => {
     wrapper.appendChild(taggedPostListCard);
 }
 
-export { printTaggedPostList }
+const filterByTag = (tag, posts) => {
+    let postslist = Object.keys(posts).map((key) => {
+      return posts[key];
+    });
+    let filteredPosts = postslist.reduce((acc, post) => {
+      if (post.tags.includes(tag)) {
+        acc.push(post);
+      }
+      return acc;
+    }, []);
+    return filteredPosts
+  }
+
+export { printTaggedPostList, filterByTag }

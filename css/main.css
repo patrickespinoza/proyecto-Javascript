@@ -190,22 +190,11 @@ header nav .container .logCreat {
   align-items: center;
 }
 header nav .container .logCreat .uno {
-  display: block;
-  color: #404040;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  text-decoration: none;
-  text-align: center;
+  color: black;
 }
 header nav .container .logCreat .uno:hover {
-  display: block;
-  color: #404040;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  text-decoration: none;
-  text-align: center;
+  text-decoration: underline;
+  color: rgb(59, 73, 223);
 }
 header nav .container .logCreat a {
   border-radius: 10px;
@@ -699,8 +688,15 @@ header nav .container .logCreat button:hover a {
 
 .social-media-icons {
   display: flex;
-  justify-content: center;
+  justify-content: start;
+  flex-wrap: wrap;
+  flex-direction: row;
   margin-top: 1rem;
+}
+.social-media-icons div:hover {
+  background-color: rgba(59, 73, 223, 0.1);
+  border-radius: 20%;
+  border: 1px solid rgba(59, 73, 223, 0.1);
 }
 .social-media-icons svg {
   width: 24px;
@@ -711,8 +707,6 @@ header nav .container .logCreat button:hover a {
 }
 .social-media-icons svg:hover {
   fill: #3b49df;
-  background-color: rgba(59, 73, 223, 0.1);
-  border-radius: 20%;
 }
 
 .popular-tags {
