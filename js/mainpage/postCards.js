@@ -107,7 +107,8 @@ let createFirstPostCard = (post) => {
     let readTime = document.createElement("span");
     let readTimeLink = document.createElement("a");
     readTimeLink.setAttribute("href", "#");
-    readTimeLink.textContent = "1 minute read";
+    readTimeLink.textContent = `${(Math.floor((Math.random() * 10) + 1)
+    )} minute read`;
     readTime.appendChild(readTimeLink);
     postFooter2.appendChild(readTime);
     let bookmarkDiv = document.createElement("div");
@@ -191,7 +192,8 @@ let createOtherPostCards = (post) => {
     let readTime = document.createElement("span");
     let readTimeLink = document.createElement("a");
     readTimeLink.setAttribute("href", "#");
-    readTimeLink.textContent = "1 minute read";
+    readTimeLink.textContent = `${(Math.floor((Math.random() * 10) + 1)
+    )} minute read`;
     readTime.appendChild(readTimeLink);
     postFooter2.appendChild(readTime);
     let bookmarkDiv = document.createElement("div");

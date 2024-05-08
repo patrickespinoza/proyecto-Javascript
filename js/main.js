@@ -8,7 +8,7 @@ import { printTaggedPostList } from "./mainpage/taggedPostList.js";
 
 import { createPostList, printPostCards } from "./mainpage/postCards.js";
 
-import { printTrendingPosts } from "./mainpage/trendingPosts.js";
+import { getTopPosts, printTrendingPosts } from "./mainpage/trendingPosts.js";
 
 import { getRelevantPosts } from "./mainpage/getRelevantPosts.js";
 

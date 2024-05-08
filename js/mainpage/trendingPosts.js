@@ -1,4 +1,4 @@
-const createTrendingPostList = (posts) => {
+const getTopPosts = (posts) => {
     let trendingPosts = {};
     for (let post in posts) {
         if (posts[post].rating >= 4) {
@@ -9,7 +9,7 @@ const createTrendingPostList = (posts) => {
 };
 const printTrendingPosts = (posts, containerId) => {
     let trendingPostContainer = document.getElementById(containerId);
-    let trendingPosts = createTrendingPostList(posts)
+    let trendingPosts = getTopPosts(posts)
     for (let post in trendingPosts) {
         let postElement = document.createElement("a");
         postElement.classList.add("btn", "btn-light", "text-start");
@@ -20,4 +20,4 @@ const printTrendingPosts = (posts, containerId) => {
 
 }
 
-export { printTrendingPosts };
+export { getTopPosts, printTrendingPosts };
