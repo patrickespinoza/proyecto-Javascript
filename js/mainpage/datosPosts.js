@@ -5,7 +5,7 @@ let posts = {
         image: "https://picsum.photos/id/21/600/900",
         author: "Author 1",
         tags: ["JavaScript", "ES6", "Frontend", "WebDevelopment"],
-        date: "2021-10-01",
+        date: "2021-12-01",
         reactions: {
             likes: 10,
             dislikes: 2,
@@ -22,7 +22,7 @@ let posts = {
         image: "https://picsum.photos/id/22/600/900",
         author: "Author 2",
         tags: ["Python", "Django", "Backend", "WebDevelopment"],
-        date: "2021-10-02",
+        date: "2021-09-02",
         reactions: {
             likes: 12,
             dislikes: 1,
@@ -56,7 +56,7 @@ let posts = {
         image: "https://picsum.photos/id/234/600/900",
         author: "Author 4",
         tags: ["Java", "Spring", "Backend", "WebDevelopment"],
-        date: "2021-10-04",
+        date: "2021-11-04",
         reactions: {
             likes: 8,
             dislikes: 0,
@@ -73,7 +73,7 @@ let posts = {
         image: "https://picsum.photos/id/32/600/900",
         author: "Author 5",
         tags: ["Go", "APIs", "Backend", "WebDevelopment"],
-        date: "2021-10-05",
+        date: "2021-05-05",
         reactions: {
             likes: 20,
             dislikes: 5,

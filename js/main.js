@@ -8,11 +8,17 @@ import { printTaggedPostList } from "./mainpage/taggedPostList.js";
 
 import { createPostList, printPostCards } from "./mainpage/postCards.js";
 
-import { createTrendingPostList, printTrendingPosts } from "./mainpage/trendingPosts.js";
+import { printTrendingPosts } from "./mainpage/trendingPosts.js";
+
+import { getRelevantPosts } from "./mainpage/getRelevantPosts.js";
+
+import { getLatestPosts } from "./mainpage/getLatestPosts.js";
 
 //se crea variable token que obtiene el token del local storage
 //let token = localStorage.getItem("token");
 const token = true; // Token simulado para propositos de prueba
+
+let taglist = ["JavaScript", "ES6", "Frontend", "WebDevelopment", "Python", "Django", "Backend", "Swift", "iOS", "MobileDevelopment", "AppDevelopment", "Java", "Spring","Go", "APIs"]; //taglist simulado para propositos de prueba
 
 /* 
 Ejemplo de uso de la variable token en otro archivo:
@@ -23,35 +29,21 @@ token
   : window.open("../views/loginForm.html", "_self");
  */
 
-
+// primer render de botones de login
 loginPostButtonsRender(token);
-
-let taglist = ["JavaScript", "ES6", "Frontend", "WebDevelopment", "Python", "Django", "Backend", "Swift", "iOS", "MobileDevelopment", "AppDevelopment", "Java", "Spring","Go", "APIs"];
-
+// despues se renderiza el segundo elemento dinamico, la lista de tags
 renderPopularTags(taglist);
-
+//despues se renderiza el aside derecho
 printTaggedPostList("WebDevelopment", posts, "random-tag-1");
 printTaggedPostList("Backend", posts, "random-tag-2");
+printTrendingPosts(posts, "trending-post-wrapper");
 
-
+//se convierte el objeto posts en un array de posts
 let postList = createPostList(posts);
-console.log(postList)
+// se imprimen las tarjetas a partir del array de posts
 printPostCards(postList, "post-wrapper");
 
-let trendingPosts = createTrendingPostList(posts);
-
-/* 
-    <div class="d-grid gap-2 p-0 mt-3" id="trending-post-wrapper">
-        <!-- el contenido de esta parte debe ser dinamico, basado en los distintos posts en la base de datos -->
-        
-        <a class="btn btn-light text-start" href="">Titulo largo de un post que se va a trabajar con
-            para que quede
-            bien chidote ay nomaaas 👀🤓👍🏻</a>
-        <a class="btn btn-light text-start" href="">Titulo largo de un post que se va a trabajar con
-            para que quede
-            bien chidote ay nomaaas 👀🤓👍🏻</a>
-    </div>
-*/
 
 
-printTrendingPosts(trendingPosts, "trending-post-wrapper");
+
+

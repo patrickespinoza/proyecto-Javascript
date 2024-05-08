@@ -58,6 +58,20 @@
 
 .tag-wrapper {
   a {
+    color: $text-dark;
     text-decoration: none;
+    transition: color 0.3s;
+  }
+  a:hover {
+    color: $primary;
+  }
+  p {
+    font-size: small;
+  }
+  li {
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 2px;
+    padding-bottom: 2px;
   }
 }

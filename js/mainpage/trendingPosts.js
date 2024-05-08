@@ -9,7 +9,8 @@ const createTrendingPostList = (posts) => {
 };
 const printTrendingPosts = (posts, containerId) => {
     let trendingPostContainer = document.getElementById(containerId);
-    for (let post in posts) {
+    let trendingPosts = createTrendingPostList(posts)
+    for (let post in trendingPosts) {
         let postElement = document.createElement("a");
         postElement.classList.add("btn", "btn-light", "text-start");
         postElement.setAttribute("href", "#");
@@ -19,4 +20,4 @@ const printTrendingPosts = (posts, containerId) => {
 
 }
 
-export { createTrendingPostList, printTrendingPosts };
+export { printTrendingPosts };
