@@ -36,15 +36,21 @@
 
 let createFirstPostCard = (post) => {
     let { title, key, description, image, author, tags, date, reactions, rating, relevant } = post;
-    const keyURL = `post.html?key=${key}`
+    const keyURL = `detail.html?key=${key}`
     let card = document.createElement("div");
     card.classList.add("card", "mb-3");
+    let imageLink = document.createElement("a");
+    imageLink.setAttribute("href", keyURL);
+
     let cardImage = document.createElement("img");
     cardImage.classList.add("card-img-top", "object-fit-cover");
     cardImage.setAttribute("src", image);
     cardImage.setAttribute("alt", title);
     cardImage.setAttribute("height", "240px");
     card.appendChild(cardImage);
+    imageLink.appendChild(cardImage);
+    card.appendChild(imageLink);
+    
     let cardBody = document.createElement("div");
     cardBody.classList.add("card-body");
     
@@ -83,7 +89,7 @@ let createFirstPostCard = (post) => {
     postFooter.classList.add("post-footer");
     for (let tag in tags) {
         let tagLink = document.createElement("a");
-        tagLink.setAttribute("href", "#");
+        tagLink.setAttribute("href", `?tag=${tags[tag]}`);
         tagLink.textContent = `#${tags[tag]}`;
         let tagDiv = document.createElement("div");
         tagDiv.appendChild(tagLink);
@@ -128,7 +134,7 @@ let createFirstPostCard = (post) => {
 let createOtherPostCards = (post) => {
     let { title, key, description, image, author, tags, date, reactions, rating, relevant } = post;
     
-    const keyURL = `post.html?key=${key}`
+    const keyURL = `detail.html?key=${key}`
     
     let card = document.createElement("div");
     card.classList.add("card", "mb-3");
@@ -170,7 +176,7 @@ let createOtherPostCards = (post) => {
     postFooter.classList.add("post-footer");
     for (let tag in tags) {
         let tagLink = document.createElement("a");
-        tagLink.setAttribute("href", "#");
+        tagLink.setAttribute("href", `?tag=${tags[tag]}`);
         tagLink.textContent = `#${tags[tag]}`;
         let tagDiv = document.createElement("div");
         tagDiv.appendChild(tagLink);
