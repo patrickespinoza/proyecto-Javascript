@@ -32,4 +32,4 @@ let data = await response.json();
 return data;
 };
 
-export { createPost, fetchPostByKey, fetchAllPosts, deletePost, editPost};
+export { createPost, fetchPostByKey, fetchAllPosts, deletePost};

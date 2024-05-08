@@ -15,7 +15,7 @@ import { getRelevantPosts } from "./modules/mainpage/getRelevantPosts.js";
 
 import { getLatestPosts } from "./modules/mainpage/getLatestPosts.js";
 
-import { createPost, fetchPostByKey, fetchAllPosts, deletePost, editPost}  from "./modules/databaseApi.js";
+import { createPost, fetchPostByKey, fetchAllPosts, deletePost}  from "./modules/databaseApi.js";
 
 //se crea variable token que obtiene el token del local storage
 let token = localStorage.getItem("token");

@@ -36,7 +36,7 @@
 
 let createFirstPostCard = (post) => {
     let { title, key, description, image, author, tags, date, reactions, rating, relevant } = post;
-    const keyURL = `detail.html?key=${key}`
+    const keyURL = `./views/detail.html?key=${key}`
     let card = document.createElement("div");
     card.classList.add("card", "mb-3");
     let imageLink = document.createElement("a");
@@ -134,7 +134,7 @@ let createFirstPostCard = (post) => {
 let createOtherPostCards = (post) => {
     let { title, key, description, image, author, tags, date, reactions, rating, relevant } = post;
     
-    const keyURL = `detail.html?key=${key}`
+    const keyURL = `./views/detail.html?key=${key}`
     
     let card = document.createElement("div");
     card.classList.add("card", "mb-3");

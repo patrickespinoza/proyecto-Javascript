@@ -68,7 +68,7 @@ const createTaggedPostListCard = (taggedPostList) => {
         let postItem = document.createElement("li");
         postItem.classList.add("list-group-item");
         let postTitle = document.createElement("a");
-        postTitle.setAttribute("href", `detail.html?key=${taggedPostList[post].key}`);
+        postTitle.setAttribute("href", `./views/detail.html?key=${taggedPostList[post].key}`);
         postTitle.textContent = taggedPostList[post].title;
         let postComments = document.createElement("p");
         postComments.textContent = `${taggedPostList[post].reactions.comments} comentarios`;

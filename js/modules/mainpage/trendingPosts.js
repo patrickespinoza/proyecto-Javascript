@@ -35,7 +35,7 @@ const printTrendingPosts = (posts, containerId) => {
     
     for (let post in trendingPosts) {
         
-        const keyURL = `detail.html?key=${trendingPosts[post].key}`
+        const keyURL = `./views/detail.html?key=${trendingPosts[post].key}`
         let postElement = document.createElement("a");
         postElement.classList.add("btn", "btn-light", "text-start");
         postElement.setAttribute("href", keyURL);
