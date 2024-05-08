@@ -26,12 +26,13 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="post-login-buttons"></ul>
                 <!-- Contenido dinamico comienza -->
                 <!-- Si el token de localstorage no esta disponible se muestra esto -->
-                <a class="btn btn-light mx-1" id = "log-in-btn">Log in</a>
+                <a class="btn btn-light mx-1" id="log-in-btn">Log in</a>
                 <a class="btn btn-outline-primary mx-1" id="create-account-btn">Create account</a>
                 <!-- Si el token de localstorage esta disponible se muestra esto  -->
                 <a class="btn btn-outline-primary mx-1" id="create-post-btn">Create post</a>
                 <a class="nav-link active mx-1" id="alert-bell">&#128276;</a>
-                <img src="assets/generic-avatar.jpg" alt="" class="rounded-circle mx-1" width="40" height="40" id="user-avatar" />
+                <img src="assets/generic-avatar.jpg" alt="" class="rounded-circle mx-1" width="40" height="40"
+                    id="user-avatar" />
             </div>
         </div>
     </nav>
@@ -138,7 +139,7 @@
                     </div>
                     <div class="d-grid gap-2 p-0 mt-3" id="popular-tags">
                         <!-- el contenido de esta parte debe ser dinamico, basado en las distintas tags en la base de datos -->
-                       
+
                     </div>
 
                     <div class="container my-3">
@@ -167,10 +168,42 @@
                         <div class="p-2"><a href="">Relevant</a></div>
                         <div class="p-2"><a href="">Latest</a></div>
                         <div class="p-2"><a href="">Top</a></div>
-                      </div>
-                      <div id="post-wrapper">
+                    </div>
+                    <div id="post-wrapper">
+              <!--           <div class="card mb-3">
+                            <img src="https://picsum.photos/id/20/600/900"
+                                class="card-img-top object-fit-cover" height="240px"="..." />
+                            <div class="card-body">
+                                <div class="author-box">
+                                    <img src="assets/generic-avatar.jpg" />
+                                    <div>
+                                        <span>
+                                            <h6><a href="">Author</a></h6>
+                                        </span>
+                                        <p><a href="">date</a></p>
+                                    </div>
 
-                      </div>
+                                </div>
+                                <div class="post-title"><a href="">Title of the post</a></div>
+
+                                <div class="post-footer">
+                                    <div><a href="">tag 1</a></div>
+                                    <div><a href="">tag 2</a></div>
+                                    <div><a href="">tag 3</a></div>
+                                    <div><a href="">tag 4</a></div>
+                                </div>
+                                <div class="post-footer">
+                                    <div><a href="">💓reactions</a></div>
+                                    <div><a href="">5 comments</a></div>
+
+                                    <span><a href="">1 minute read</a></span>
+                                    <div>
+                                        <a href=""><img src="assets/bookmark.svg" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
 
 
 
@@ -178,10 +211,10 @@
 
                 <!-- Sidebar derecho -->
                 <div class="col-md-3 d-none d-md-block">
-                    <div class="card tag-wrapper" id="tag-wrapper-1">
+                    <div class="card tag-wrapper">
                         <div class="card-body">
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">
+                            <ul class="list-group list-group-flush" id="random-tag-1">
+                                <!-- <li class="list-group-item">
                                     <h6>random tag 1</h6>
                                     <p>
                                         description, se genera dinamicamente a partir de la
@@ -208,14 +241,14 @@
                                 <li class="list-group-item">
                                     <a href="">tagged post title 5</a>
                                     <p>${numero} comentarios</p>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                     </div>
                     <div class="card tag-wrapper mt-3" id="tag-wrapper-2">
                         <div class="card-body">
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">
+                            <ul class="list-group list-group-flush" id="random-tag-2">
+                                <!-- <li class="list-group-item">
                                     <h6>random tag 2</h6>
                                     <p>
                                         description, se genera dinamicamente a partir de la
@@ -242,31 +275,22 @@
                                 <li class="list-group-item">
                                     <a href="">tagged post title 5</a>
                                     <p>${numero} comentarios</p>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                     </div>
-                    <div class="d-grid gap-2 p-0 mt-3" id="random-post-wrapper">
-                        <!-- el contenido de esta parte debe ser dinamico, basado en los distintos posts en la base de datos -->
+                    <div class="mt-3">
                         <h6>trending guides/resources</h6>
+                    </div>
+                    <div class="d-grid gap-2 p-0 mt-3" id="trending-post-wrapper">
+                        <!-- el contenido de esta parte debe ser dinamico, basado en los distintos posts en la base de datos
+                        
                         <a class="btn btn-light text-start" href="">Titulo largo de un post que se va a trabajar con
                             para que quede
                             bien chidote ay nomaaas 👀🤓👍🏻</a>
                         <a class="btn btn-light text-start" href="">Titulo largo de un post que se va a trabajar con
                             para que quede
-                            bien chidote ay nomaaas 👀🤓👍🏻</a>
-                        <a class="btn btn-light text-start" href="">Titulo largo de un post que se va a trabajar con
-                            para que quede
-                            bien chidote ay nomaaas 👀🤓👍🏻</a>
-                        <a class="btn btn-light text-start" href="">Titulo largo de un post que se va a trabajar con
-                            para que quede
-                            bien chidote ay nomaaas 👀🤓👍🏻</a>
-                        <a class="btn btn-light text-start" href="">Titulo largo de un post que se va a trabajar con
-                            para que quede
-                            bien chidote ay nomaaas 👀🤓👍🏻</a>
-                        <a class="btn btn-light text-start" href="">Titulo largo de un post que se va a trabajar con
-                            para que quede
-                            bien chidote ay nomaaas 👀🤓👍🏻</a>
+                            bien chidote ay nomaaas 👀🤓👍🏻</a> -->
                     </div>
                 </div>
             </div>

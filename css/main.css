@@ -26,7 +26,7 @@ body {
 }
 
 .sidebar-card {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   padding: 1rem;
   color: #242424;
   box-shadow: 0 0 0 1px rgba(23, 23, 23, 0.05);
@@ -93,7 +93,7 @@ footer {
   }
 }
 header {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   height: 56px;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   width: 100%;
@@ -218,7 +218,7 @@ header nav .container .logCreat button:hover a {
 }
 
 .navbar-background-light {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-bottom: rgb(200, 200, 200) 1px solid;
 }
 
@@ -343,7 +343,7 @@ header nav .container .logCreat button:hover a {
 }
 
 .simple_post {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   box-shadow: 0 0 0 1px rgba(23, 23, 23, 0.05);
   margin: 0 0 0.5rem;
   border-radius: 8px;
@@ -397,7 +397,7 @@ header nav .container .logCreat button:hover a {
   word-break: break-word;
 }
 .simple_post .content_post__title h2:hover {
-  color: #3B49DF;
+  color: #3b49df;
   cursor: pointer;
 }
 .simple_post .content_post__tags {
@@ -448,7 +448,7 @@ header nav .container .logCreat button:hover a {
 .simple_post .content_post__bottom_details_left .reactions_emojis > span {
   display: inline-block;
   background-color: rgb(245, 245, 245);
-  border: 5px solid #FFFFFF;
+  border: 5px solid #ffffff;
   border-radius: 15px;
   margin-right: -0.75em;
   width: 28px;
@@ -524,7 +524,7 @@ header nav .container .logCreat button:hover a {
 }
 
 .alist:hover {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: blue;
   border-radius: 8px;
 }
@@ -554,7 +554,7 @@ header nav .container .logCreat button:hover a {
 }
 
 .create-account-card {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   padding: 1rem;
   border-radius: 8px;
   border: 1px solid rgba(59, 73, 223, 0.1);
@@ -570,12 +570,12 @@ header nav .container .logCreat button:hover a {
 
 .create-account {
   display: block;
-  background-color: #FFFFFF;
-  color: #3B49DF;
+  background-color: #ffffff;
+  color: #3b49df;
   font-size: 1rem;
   font-weight: bold;
   padding: 0.5rem 1rem;
-  border: 1px solid #3B49DF;
+  border: 1px solid #3b49df;
   border-radius: 4px;
   margin-top: 1rem;
   cursor: pointer;
@@ -585,12 +585,12 @@ header nav .container .logCreat button:hover a {
 
 .create-account:hover {
   display: block;
-  background-color: #3B49DF;
-  color: #FFFFFF;
+  background-color: #3b49df;
+  color: #ffffff;
   font-size: 1rem;
   font-weight: bold;
   padding: 0.5rem 1rem;
-  border: 1px solid #3B49DF;
+  border: 1px solid #3b49df;
   border-radius: 4px;
   margin-top: 1rem;
   cursor: pointer;
@@ -685,7 +685,7 @@ header nav .container .logCreat button:hover a {
   transition: fill 0.3s;
 }
 .social-media-icons svg:hover {
-  fill: #3B49DF;
+  fill: #3b49df;
   background-color: rgba(59, 73, 223, 0.1);
   border-radius: 20%;
 }
@@ -706,7 +706,7 @@ header nav .container .logCreat button:hover a {
   margin: 1rem 0;
 }
 .last-part-aside a {
-  color: #3B49DF;
+  color: #3b49df;
   text-decoration: none;
 }
 .last-part-aside a:hover {
@@ -718,17 +718,17 @@ header nav .container .logCreat button:hover a {
   max-height: 400px;
 }
 
-.post-title {
+.post-title a {
   font-size: 2rem;
   text-decoration: none;
   font-weight: bolder;
+  color: #404040;
 }
-
-.post-title:hover {
+.post-title a:hover {
   font-size: 2rem;
   text-decoration: none;
   font-weight: bolder;
-  color: #3B49DF;
+  color: #3b49df;
 }
 
 .post-filters a {
@@ -737,10 +737,76 @@ header nav .container .logCreat button:hover a {
 }
 .post-filters div:hover {
   border: 1px solid rgba(59, 73, 223, 0.1);
-  background-color: #FFFFFF;
+  background-color: rgb(245, 245, 245);
   border-radius: 10%;
 }
 .post-filters div:hover a {
-  color: #3B49DF;
+  color: #3b49df;
   font-weight: bold;
+}
+
+.author-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.author-box img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+.author-box h6 {
+  font-size: 1 rem;
+  font-weight: bold;
+  margin: 0;
+}
+.author-box h6 a {
+  text-decoration: none;
+  color: #404040;
+}
+.author-box span:hover {
+  border: 1px solid rgba(59, 73, 223, 0.1);
+  background-color: rgb(245, 245, 245);
+  border-radius: 10%;
+  color: #3b49df;
+}
+.author-box p {
+  font-size: 1rem;
+  margin: 0;
+}
+.author-box p a {
+  text-decoration: none;
+  color: #404040;
+}
+.author-box div {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.post-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.post-footer a {
+  color: #404040;
+  text-decoration: none;
+}
+.post-footer span {
+  margin-left: auto;
+}
+.post-footer div {
+  padding: 0.5rem;
+  transition: background-color 0.3s;
+}
+.post-footer div:hover {
+  background-color: rgba(59, 73, 223, 0.1);
+  border-radius: 10%;
+  border: 1px solid rgba(59, 73, 223, 0.1);
 }/*# sourceMappingURL=main.css.map */

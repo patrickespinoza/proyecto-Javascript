@@ -1,10 +1,10 @@
 let posts = {
     post1: {
-        title: "Post 1",
-        description: "Description 1",
-        image: "https://picsum.photos/id/237/200/300",
+        title: "Introducción a JavaScript ES6",
+        description: "Aprende sobre las nuevas características de JavaScript ES6.",
+        image: "https://picsum.photos/id/21/600/900",
         author: "Author 1",
-        tags: ["JavaScript", "Python", "Java", "C++"],
+        tags: ["JavaScript", "ES6", "Frontend", "WebDevelopment"],
         date: "2021-10-01",
         reactions: {
             likes: 10,
@@ -17,11 +17,11 @@ let posts = {
         relevant: false
     },
     post2: {
-        title: "Post 2",
-        description: "Description 2",
-        image: "https://picsum.photos/id/237/200/300",
+        title: "Desarrollo web con Python y Django",
+        description: "Construye aplicaciones web poderosas utilizando Python y el framework Django.",
+        image: "https://picsum.photos/id/22/600/900",
         author: "Author 2",
-        tags: ["C++", "C#", "Ruby", "Go"],
+        tags: ["Python", "Django", "Backend", "WebDevelopment"],
         date: "2021-10-02",
         reactions: {
             likes: 12,
@@ -30,15 +30,15 @@ let posts = {
             sad: 0,
             comments: 8
         },
-        rating: 3,
+        rating: 4.5,
         relevant: true
     },
     post3: {
-        title: "Post 3",
-        description: "Description 3",
-        image: "https://picsum.photos/id/156/200/300",
+        title: "Desarrollo de aplicaciones móviles con Swift",
+        description: "Explora el mundo del desarrollo de aplicaciones móviles con Swift.",
+        image: "https://picsum.photos/id/137/600/900",
         author: "Author 3",
-        tags: ["Go", "Swift", "PHP", "Rust"],
+        tags: ["Swift", "iOS", "MobileDevelopment", "AppDevelopment"],
         date: "2021-10-03",
         reactions: {
             likes: 15,
@@ -47,15 +47,15 @@ let posts = {
             sad: 2,
             comments: 12
         },
-        rating: 4,
+        rating: 3.8,
         relevant: true
     },
     post4: {
-        title: "Post 4",
-        description: "Description 4",
-        image: "https://picsum.photos/id/124/200/300",
+        title: "Introducción al desarrollo web con Java Spring",
+        description: "Descubre cómo construir aplicaciones web robustas con Java y el framework Spring.",
+        image: "https://picsum.photos/id/234/600/900",
         author: "Author 4",
-        tags: ["C++", "C#","JavaScript", "Python"],
+        tags: ["Java", "Spring", "Backend", "WebDevelopment"],
         date: "2021-10-04",
         reactions: {
             likes: 8,
@@ -64,15 +64,15 @@ let posts = {
             sad: 0,
             comments: 3
         },
-        rating: 5,
-        relevant: false
+        rating: 4.2,
+        relevant: true
     },
     post5: {
-        title: "Post 5",
-        description: "Description 5",
-        image: "https://picsum.photos/id/35/200/300",
+        title: "Desarrollo de APIs RESTful con Go",
+        description: "Aprende a construir APIs RESTful eficientes utilizando el lenguaje de programación Go.",
+        image: "https://picsum.photos/id/32/600/900",
         author: "Author 5",
-        tags: ["Ruby", "Go", "Python", "Rust"],
+        tags: ["Go", "APIs", "Backend", "WebDevelopment"],
         date: "2021-10-05",
         reactions: {
             likes: 20,
@@ -81,9 +81,9 @@ let posts = {
             sad: 3,
             comments: 15
         },
-        rating: 8,
+        rating: 4.7,
         relevant: true
     }
 };
 
-export {posts};
+export { posts };
