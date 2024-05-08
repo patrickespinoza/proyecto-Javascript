@@ -15,23 +15,26 @@
         <div class="container-fluid">
             <img src="assets/logo.png" class="me-2" width="50" height="40" />
             <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search-bar"/>
             </form>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria 1-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="post-login-buttons"></ul>
                 <!-- Contenido dinamico comienza -->
                 <!-- Si el token de localstorage no esta disponible se muestra esto -->
-                <a id="login" class="btn btn-light mx-1">Log in</a>
-                <a class="btn btn-outline-primary mx-1">Create account</a>
+
+                <a class="btn btn-light mx-1" id="login">Log in</a>
+                <a class="btn btn-outline-primary mx-1" id="create-account-btn">Create account</a
+               
                 <!-- Si el token de localstorage esta disponible se muestra esto  -->
-                <a class="btn btn-outline-primary mx-1">Create post</a>
-                <a class="nav-link active mx-1">&#128276;</a>
-                <img src="assets/generic-avatar.jpg" alt="" class="rounded-circle mx-1" width="40" height="40" />
+                <a class="btn btn-outline-primary mx-1" id="create-post-btn">Create post</a>
+                <a class="nav-link active mx-1" id="alert-bell">&#128276;</a>
+                <img src="assets/generic-avatar.jpg" alt="" class="rounded-circle mx-1" width="40" height="40"
+                    id="user-avatar" />
             </div>
         </div>
     </nav>
@@ -40,7 +43,8 @@
             <div class="row">
                 <div class="col-md-3 col-sm-3 d-none d-sm-block">
                     <!-- Esta tarjeta tambien se debe generar de forma dinamica, solo debe aparecer con la verificacion del token de localstorage -->
-                    <div id="loginright" class="card">
+                    <div class="card" id="loginright">
+                   
                         <div class="card-body">
                             <h5>
                                 DEV Community is a community of 1,448,555 amazing developers
@@ -133,25 +137,12 @@
                             </a>
                         </div>
                     </div>
+                    <div class="my-2">
+                        <h6>Popular tags</h6>
+                    </div>
                     <div class="d-grid gap-2 p-0 mt-3" id="popular-tags">
                         <!-- el contenido de esta parte debe ser dinamico, basado en las distintas tags en la base de datos -->
-                        <h6>Popular tags</h6>
-                        <a class="btn btn-light text-start" href="">tag 0</a>
-                        <a href="" class="btn btn-light text-start">tag 1</a>
-                        <a href="" class="btn btn-light text-start">tag 2</a>
-                        <a href="" class="btn btn-light text-start">tag 3</a>
-                        <a href="" class="btn btn-light text-start">tag 4</a>
-                        <a href="" class="btn btn-light text-start">tag 5</a>
-                        <a href="" class="btn btn-light text-start">tag 6</a>
-                        <a href="" class="btn btn-light text-start">tag 7</a>
-                        <a href="" class="btn btn-light text-start">tag 8</a>
-                        <a href="" class="btn btn-light text-start">tag 9</a>
-                        <a href="" class="btn btn-light text-start">tag 10</a>
-                        <a href="" class="btn btn-light text-start">tag 11</a>
-                        <a href="" class="btn btn-light text-start">tag 12</a>
-                        <a href="" class="btn btn-light text-start">tag 13</a>
-                        <a href="" class="btn btn-light text-start">tag 14</a>
-                        <a href="" class="btn btn-light text-start">tag 15</a>
+
                     </div>
 
                     <div class="container my-3">
@@ -176,82 +167,45 @@
                 - boton de bookmark
                 -->
                 <div class="col-md-6 col-sm-9">
-                    <div class="card mb-3">
-                        <img src="https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fw19259c6raar2ple6904.png"
-                            class="card-img-top" alt="..." />
-                        <div class="card-body">
-                            <div class="d-flex">
-                                <img src="assets/generic-avatar.jpg" alt="" class="rounded-circle  me-3" width="40"
-                                    height="40" />
-
-                                <div class="d-flex flex-column">
-                                    <a class="card-subtitle mb-2 text-muted text-start">Author</a>
-                                    <a class="">date</a>
-                                </div>
-                            </div>
-                            <a class="card-title post-title ">Post title</a>
-                            <div class="d-flex">
-                                <a class="btn btn-light">tag 1</a>
-                                <a class="btn btn-light">tag 2</a>
-                                <a class="btn btn-light">tag 3</a>
-                            </div>
-                            <div class="d-flex">
-                                <a class="btn btn-light">Reactions(solo si hay)</a>
-                                <a class="btn btn-light me-auto">comments(solo si hay)</a>
-                                <span>{n} minute read</span>
-                                <a class="btn btn-light">🔖</a>
-                            </div>
-                        </div>
+                    <div class="d-flex flex-row mb-1 post-filters">
+                        <div class="p-2"><a id="relevant-post-sorter" href="">Relevant</a></div>
+                        <div class="p-2"><a id="latest-post-sorter" href="">Latest</a></div>
+                        <div class="p-2"><a id="top-post-sorter" href="">Top</a></div>
                     </div>
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <div class="d-flex">
-                                <img src="assets/generic-avatar.jpg" alt="" class="rounded-circle  me-3" width="40"
-                                    height="40" />
+                    <div id="post-wrapper">
+              <!--           <div class="card mb-3">
+                            <img src="https://picsum.photos/id/20/600/900"
+                                class="card-img-top object-fit-cover" height="240px"="..." />
+                            <div class="card-body">
+                                <div class="author-box">
+                                    <img src="assets/generic-avatar.jpg" />
+                                    <div>
+                                        <span>
+                                            <h6><a href="">Author</a></h6>
+                                        </span>
+                                        <p><a href="">date</a></p>
+                                    </div>
 
-                                <div class="d-flex flex-column">
-                                    <a class="card-subtitle mb-2 text-muted text-start">Author</a>
-                                    <a class="">date</a>
+                                </div>
+                                <div class="post-title"><a href="">Title of the post</a></div>
+
+                                <div class="post-footer">
+                                    <div><a href="">tag 1</a></div>
+                                    <div><a href="">tag 2</a></div>
+                                    <div><a href="">tag 3</a></div>
+                                    <div><a href="">tag 4</a></div>
+                                </div>
+                                <div class="post-footer">
+                                    <div><a href="">💓reactions</a></div>
+                                    <div><a href="">5 comments</a></div>
+
+                                    <span><a href="">1 minute read</a></span>
+                                    <div>
+                                        <a href=""><img src="assets/bookmark.svg" alt=""></a>
+                                    </div>
                                 </div>
                             </div>
-                            <a class="card-title post-title ">Post title</a>
-                            <div class="d-flex">
-                                <a class="btn btn-light">tag 1</a>
-                                <a class="btn btn-light">tag 2</a>
-                                <a class="btn btn-light">tag 3</a>
-                            </div>
-                            <div class="d-flex">
-                                <a class="btn btn-light">Reactions(solo si hay)</a>
-                                <a class="btn btn-light me-auto">comments(solo si hay)</a>
-                                <span>{n} minute read</span>
-                                <a class="btn btn-light">🔖</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mb-3">
-                        <div class="card-body">
-                            <div class="d-flex">
-                                <img src="assets/generic-avatar.jpg" alt="" class="rounded-circle  me-3" width="40"
-                                    height="40" />
-
-                                <div class="d-flex flex-column">
-                                    <a class="card-subtitle mb-2 text-muted text-start">Author</a>
-                                    <a class="">date</a>
-                                </div>
-                            </div>
-                            <a class="card-title post-title ">Post title</a>
-                            <div class="d-flex">
-                                <a class="btn btn-light">tag 1</a>
-                                <a class="btn btn-light">tag 2</a>
-                                <a class="btn btn-light">tag 3</a>
-                            </div>
-                            <div class="d-flex">
-                                <a class="btn btn-light">Reactions(solo si hay)</a>
-                                <a class="btn btn-light me-auto">comments(solo si hay)</a>
-                                <span>{n} minute read</span>
-                                <a class="btn btn-light">🔖</a>
-                            </div>
-                        </div>
+                        </div> -->
                     </div>
 
 
@@ -260,10 +214,10 @@
 
                 <!-- Sidebar derecho -->
                 <div class="col-md-3 d-none d-md-block">
-                    <div class="card tag-wrapper" id="tag-wrapper-1">
+                    <div class="card tag-wrapper">
                         <div class="card-body">
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">
+                            <ul class="list-group list-group-flush" id="random-tag-1">
+                                <!-- <li class="list-group-item">
                                     <h6>random tag 1</h6>
                                     <p>
                                         description, se genera dinamicamente a partir de la
@@ -290,14 +244,14 @@
                                 <li class="list-group-item">
                                     <a href="">tagged post title 5</a>
                                     <p>${numero} comentarios</p>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                     </div>
                     <div class="card tag-wrapper mt-3" id="tag-wrapper-2">
                         <div class="card-body">
-                            <ul class="list-group list-group-flush">
-                                <li class="list-group-item">
+                            <ul class="list-group list-group-flush" id="random-tag-2">
+                                <!-- <li class="list-group-item">
                                     <h6>random tag 2</h6>
                                     <p>
                                         description, se genera dinamicamente a partir de la
@@ -324,31 +278,22 @@
                                 <li class="list-group-item">
                                     <a href="">tagged post title 5</a>
                                     <p>${numero} comentarios</p>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                     </div>
-                    <div class="d-grid gap-2 p-0 mt-3" id="random-post-wrapper">
-                        <!-- el contenido de esta parte debe ser dinamico, basado en los distintos posts en la base de datos -->
+                    <div class="mt-3">
                         <h6>trending guides/resources</h6>
+                    </div>
+                    <div class="d-grid gap-2 p-0 mt-3" id="trending-post-wrapper">
+                        <!-- el contenido de esta parte debe ser dinamico, basado en los distintos posts en la base de datos
+                        
                         <a class="btn btn-light text-start" href="">Titulo largo de un post que se va a trabajar con
                             para que quede
                             bien chidote ay nomaaas 👀🤓👍🏻</a>
                         <a class="btn btn-light text-start" href="">Titulo largo de un post que se va a trabajar con
                             para que quede
-                            bien chidote ay nomaaas 👀🤓👍🏻</a>
-                        <a class="btn btn-light text-start" href="">Titulo largo de un post que se va a trabajar con
-                            para que quede
-                            bien chidote ay nomaaas 👀🤓👍🏻</a>
-                        <a class="btn btn-light text-start" href="">Titulo largo de un post que se va a trabajar con
-                            para que quede
-                            bien chidote ay nomaaas 👀🤓👍🏻</a>
-                        <a class="btn btn-light text-start" href="">Titulo largo de un post que se va a trabajar con
-                            para que quede
-                            bien chidote ay nomaaas 👀🤓👍🏻</a>
-                        <a class="btn btn-light text-start" href="">Titulo largo de un post que se va a trabajar con
-                            para que quede
-                            bien chidote ay nomaaas 👀🤓👍🏻</a>
+                            bien chidote ay nomaaas 👀🤓👍🏻</a> -->
                     </div>
                 </div>
             </div>
@@ -358,7 +303,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script src="/js/LoginPrincipal.js"></script>
+
+    <script src="/js/main.js" type="module"></script>
 </body>
 
 </html>
