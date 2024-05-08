@@ -22,14 +22,7 @@ let data = await response.json();
 return data;
 };
 
-const editPost = async (postKey, postObject) => {
-let response = await fetch(`${BASE_URL}/${postKey}/.json`, {
-    method: "PATCH",
-    body: JSON.stringify(postObject),
-});
-let data = await response.json();
-return data;
-};
+
 
 const deletePost = async (postKey) => {
 let response = await fetch(`${BASE_URL}/${postKey}/.json`, {
