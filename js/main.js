@@ -77,4 +77,21 @@ topPostSorter.addEventListener("click", (event) => {
   printPostCards(postList,"post-wrapper");
 });
 
+
+
+let filterInput = document.getElementById("search-bar");
+filterInput.addEventListener("keyup", (event) => {
+  let query = event.target.value;
+  
+
+
+  /* let result = posts.filter((title) =>
+    posts.title.toLowerCase().includes(query.toLowerCase())
+  );
+ */
+  console.log(query);
+  console.log(posts.post1.title);
+  //printAllProducts(result, "product-wrapper");
+});
+
 printPostCards(createPostList(posts), "post-wrapper");
