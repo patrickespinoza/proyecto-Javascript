@@ -15,8 +15,8 @@ import { getRelevantPosts } from "./modules/mainpage/getRelevantPosts.js";
 import { getLatestPosts } from "./modules/mainpage/getLatestPosts.js";
 
 //se crea variable token que obtiene el token del local storage
-//let token = localStorage.getItem("token");
-const token = true; // Token simulado para propositos de prueba
+let token = localStorage.getItem("token");
+//const token = false; // Token simulado para propositos de prueba
 
 
 
@@ -43,14 +43,14 @@ printTrendingPosts(posts, "trending-post-wrapper");
 let relevantPostSorter = document.getElementById("relevant-post-sorter");
 relevantPostSorter.addEventListener("click", (event) => {
   event.preventDefault();
-  const postList = getRelevantPosts(posts);
+  const postList = createPostList(getRelevantPosts(posts));
   printPostCards(postList, "post-wrapper");
 });
 
 let latestPostSorter = document.getElementById("latest-post-sorter");
 latestPostSorter.addEventListener("click", (event) => {
   event.preventDefault();
-  const postList = getLatestPosts(posts);
+  const postList = createPostList(getLatestPosts(posts));
   printPostCards(postList, "post-wrapper");
 });
 

@@ -35,8 +35,8 @@
     */
 
 let createFirstPostCard = (post) => {
-    let { title, description, image, author, tags, date, reactions, rating, relevant } = post;
-    
+    let { title, key, description, image, author, tags, date, reactions, rating, relevant } = post;
+    const keyURL = `post.html?key=${key}`
     let card = document.createElement("div");
     card.classList.add("card", "mb-3");
     let cardImage = document.createElement("img");
@@ -57,14 +57,14 @@ let createFirstPostCard = (post) => {
     let authorFormat = document.createElement("h6");
     let authorName = document.createElement("span");
     let authorLink = document.createElement("a");
-    authorLink.setAttribute("href", "#");
+    authorLink.setAttribute("href", keyURL);
     authorLink.textContent = author;
     authorName.appendChild(authorLink);
     authorFormat.appendChild(authorName);
     authorInfo.appendChild(authorFormat);
     let postDate = document.createElement("p");
     let dateLink = document.createElement("a");
-    dateLink.setAttribute("href", "#");
+    dateLink.setAttribute("href", keyURL);
     dateLink.textContent = date;
     postDate.appendChild(dateLink);
     authorInfo.appendChild(postDate);
@@ -74,7 +74,7 @@ let createFirstPostCard = (post) => {
     let postTitle = document.createElement("div");
     postTitle.classList.add("post-title");
     let titleLink = document.createElement("a");
-    titleLink.setAttribute("href", "#");
+    titleLink.setAttribute("href", keyURL);
     titleLink.textContent = title;
     postTitle.appendChild(titleLink);
     cardBody.appendChild(postTitle);
@@ -94,19 +94,19 @@ let createFirstPostCard = (post) => {
     postFooter2.classList.add("post-footer");
     let reactionsBox = document.createElement("div");
     let reactionsLink = document.createElement("a");
-    reactionsLink.setAttribute("href", "#");
+    reactionsLink.setAttribute("href", keyURL);
     reactionsLink.textContent = `💓${reactions.likes} reactions`
     reactionsBox.appendChild(reactionsLink);
     let commentsBox = document.createElement("div");
     let commentsLink = document.createElement("a");
-    commentsLink.setAttribute("href", "#");
+    commentsLink.setAttribute("href", keyURL);
     commentsLink.textContent = `${reactions.comments} comments`;
     commentsBox.appendChild(commentsLink);
     postFooter2.appendChild(reactionsBox);
     postFooter2.appendChild(commentsBox);
     let readTime = document.createElement("span");
     let readTimeLink = document.createElement("a");
-    readTimeLink.setAttribute("href", "#");
+    readTimeLink.setAttribute("href", keyURL);
     readTimeLink.textContent = `${(Math.floor((Math.random() * 10) + 1)
     )} minute read`;
     readTime.appendChild(readTimeLink);
@@ -126,7 +126,9 @@ let createFirstPostCard = (post) => {
 }
 
 let createOtherPostCards = (post) => {
-    let { title, description, image, author, tags, date, reactions, rating, relevant } = post;
+    let { title, key, description, image, author, tags, date, reactions, rating, relevant } = post;
+    
+    const keyURL = `post.html?key=${key}`
     
     let card = document.createElement("div");
     card.classList.add("card", "mb-3");
@@ -142,14 +144,14 @@ let createOtherPostCards = (post) => {
     let authorFormat = document.createElement("h6");
     let authorName = document.createElement("span");
     let authorLink = document.createElement("a");
-    authorLink.setAttribute("href", "#");
+    authorLink.setAttribute("href", keyURL);
     authorLink.textContent = author;
     authorName.appendChild(authorLink);
     authorFormat.appendChild(authorName);
     authorInfo.appendChild(authorFormat);
     let postDate = document.createElement("p");
     let dateLink = document.createElement("a");
-    dateLink.setAttribute("href", "#");
+    dateLink.setAttribute("href", keyURL);
     dateLink.textContent = date;
     postDate.appendChild(dateLink);
     authorInfo.appendChild(postDate);
@@ -159,7 +161,7 @@ let createOtherPostCards = (post) => {
     let postTitle = document.createElement("div");
     postTitle.classList.add("post-title");
     let titleLink = document.createElement("a");
-    titleLink.setAttribute("href", "#");
+    titleLink.setAttribute("href", keyURL);
     titleLink.textContent = title;
     postTitle.appendChild(titleLink);
     cardBody.appendChild(postTitle);
@@ -179,19 +181,19 @@ let createOtherPostCards = (post) => {
     postFooter2.classList.add("post-footer");
     let reactionsBox = document.createElement("div");
     let reactionsLink = document.createElement("a");
-    reactionsLink.setAttribute("href", "#");
+    reactionsLink.setAttribute("href", keyURL);
     reactionsLink.textContent = `💓${reactions.likes} reactions`
     reactionsBox.appendChild(reactionsLink);
     let commentsBox = document.createElement("div");
     let commentsLink = document.createElement("a");
-    commentsLink.setAttribute("href", "#");
+    commentsLink.setAttribute("href", keyURL);
     commentsLink.textContent = `${reactions.comments} comments`;
     commentsBox.appendChild(commentsLink);
     postFooter2.appendChild(reactionsBox);
     postFooter2.appendChild(commentsBox);
     let readTime = document.createElement("span");
     let readTimeLink = document.createElement("a");
-    readTimeLink.setAttribute("href", "#");
+    readTimeLink.setAttribute("href", keyURL);
     readTimeLink.textContent = `${(Math.floor((Math.random() * 10) + 1)
     )} minute read`;
     readTime.appendChild(readTimeLink);
