@@ -18,7 +18,23 @@ import { getLatestPosts } from "./mainpage/getLatestPosts.js";
 //let token = localStorage.getItem("token");
 const token = true; // Token simulado para propositos de prueba
 
-let taglist = ["JavaScript", "ES6", "Frontend", "WebDevelopment", "Python", "Django", "Backend", "Swift", "iOS", "MobileDevelopment", "AppDevelopment", "Java", "Spring","Go", "APIs"]; //taglist simulado para propositos de prueba
+let taglist = [
+  "JavaScript",
+  "ES6",
+  "Frontend",
+  "WebDevelopment",
+  "Python",
+  "Django",
+  "Backend",
+  "Swift",
+  "iOS",
+  "MobileDevelopment",
+  "AppDevelopment",
+  "Java",
+  "Spring",
+  "Go",
+  "APIs",
+]; //taglist simulado para propositos de prueba
 
 /* 
 Ejemplo de uso de la variable token en otro archivo:
@@ -39,11 +55,26 @@ printTaggedPostList("Backend", posts, "random-tag-2");
 printTrendingPosts(posts, "trending-post-wrapper");
 
 //se convierte el objeto posts en un array de posts
-let postList = createPostList(posts);
-// se imprimen las tarjetas a partir del array de posts
-printPostCards(postList, "post-wrapper");
 
+let relevantPostSorter = document.getElementById("relevant-post-sorter");
+relevantPostSorter.addEventListener("click", (event) => {
+  event.preventDefault();
+  const postList = getRelevantPosts(posts);
+  printPostCards(postList, "post-wrapper");
+});
 
+let latestPostSorter = document.getElementById("latest-post-sorter");
+latestPostSorter.addEventListener("click", (event) => {
+  event.preventDefault();
+  const postList = getLatestPosts(posts);
+  printPostCards(postList, "post-wrapper");
+});
 
+let topPostSorter = document.getElementById("top-post-sorter");
+topPostSorter.addEventListener("click", (event) => {
+  event.preventDefault();
+  const postList = createPostList(getTopPosts(posts));
+  printPostCards(postList,"post-wrapper");
+});
 
-
+printPostCards(createPostList(posts), "post-wrapper");

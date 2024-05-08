@@ -224,6 +224,7 @@ const createPostList = (posts) => {
 
 const printPostCards = (posts, wrapperId) => {
     let postWrapper = document.getElementById(wrapperId);
+    postWrapper.innerHTML = "";
     postWrapper.appendChild(createFirstPostCard(posts[0]));
     for ( let i = 1; i < posts.length; i++) {
         postWrapper.appendChild(createOtherPostCards(posts[i]));
