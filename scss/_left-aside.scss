@@ -115,9 +115,16 @@
 }
 .social-media-icons {
   display: flex;
-  justify-content: center;
+  justify-content: start;
+  flex-wrap: wrap;
+  flex-direction: row;
   margin-top: 1rem;
 
+  div:hover {
+    background-color: $primary-light;
+    border-radius: 20%;
+    border: 1px solid $primary-light;
+  }
   svg {
     width: 24px;
     height: 24px;
@@ -127,8 +134,6 @@
   }
   svg:hover {
     fill: $primary;
-    background-color: $primary-light;
-    border-radius: 20%;
   }
 }
 
