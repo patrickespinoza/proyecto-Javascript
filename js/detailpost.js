@@ -2,11 +2,19 @@
 
 import {loginPostButtonsRenderDetail} from "../js/modules/mainpage/detectLogin.js";
 
+import { fetchPostByKey } from "../js/modules/databaseApi.js";
+
 let token = localStorage.getItem("token");
 
 loginPostButtonsRenderDetail(token);
 
-import { fetchPostByKey } from "../js/modules/databaseApi.js";
+let logOutButton = document.getElementById("log-out-btn");
+logOutButton.addEventListener("click", (event) => {
+  event.preventDefault();
+  localStorage.removeItem("token");
+  window.open("../index.html", "_self");
+});
+
 const url = window.location.href;
 //instancia url
 const params = new URLSearchParams(new URL(url).search);
