@@ -854,4 +854,38 @@ header nav .container .logCreat button:hover a {
 .author-card-body h6 {
   margin-top: 1.5rem;
   margin-bottom: 0px;
+}
+
+#posts-by-author-wrapper h4 {
+  margin-bottom: 2rem;
+  font-weight: bolder;
+}
+#posts-by-author-wrapper h4 a {
+  color: #3b49df;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+#posts-by-author-wrapper h4 a:hover {
+  color: #404040;
+}
+#posts-by-author-wrapper div a {
+  color: #404040;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+#posts-by-author-wrapper div a:hover {
+  color: #3b49df;
+}
+#posts-by-author-wrapper div div {
+  flex: row;
+  align-items: flex-start;
+}
+#posts-by-author-wrapper div div a {
+  font-size: smaller;
+  color: #404040;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+#posts-by-author-wrapper div div a:hover {
+  color: #575757;
 }/*# sourceMappingURL=main.css.map */

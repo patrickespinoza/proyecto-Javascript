@@ -23,3 +23,41 @@
     margin-bottom: 0px;
   }
 }
+
+#posts-by-author-wrapper {
+  h4 {
+    margin-bottom: 2rem;
+    font-weight: bolder;
+    a {
+      color: $primary;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    a:hover {
+      color: $text-dark;
+    }
+  }
+  div {
+    a {
+      color: $text-dark;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    a:hover {
+      color: $primary;
+    }
+    div {
+      flex: row;
+      align-items: flex-start;
+      a {
+        font-size: smaller;
+        color: $text-dark;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      a:hover {
+        color: $text;
+      }
+    }
+  }
+}

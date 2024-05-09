@@ -4,6 +4,8 @@ import {loginPostButtonsRenderDetail} from "../js/modules/mainpage/detectLogin.j
 
 import { fetchPostByKey } from "../js/modules/databaseApi.js";
 
+import {renderPostsByAuthor} from "../js/modules/postDetail/getPostsbyAuthor.js"
+
 let token = localStorage.getItem("token");
 
 loginPostButtonsRenderDetail(token);
@@ -42,6 +44,8 @@ const printPostData = async (postKey) => {
   document.getElementById("post-title").innerText = title;
   document.getElementById("post-content").innerText = content;
   document.getElementById("post-picture").setAttribute("src", image);
+  renderPostsByAuthor(postData, author, "posts-by-author-wrapper");
 };
 
 await printPostData(postKey);
+
