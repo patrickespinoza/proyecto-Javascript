@@ -1,3 +1,4 @@
+
 const BASE_URL = "https://kodemia33jsluis-default-rtdb.firebaseio.com/-NxMBmOyF4ljPkmbcTQT";
 
 const createPost = async (postObject) => {
@@ -33,3 +34,4 @@ return data;
 };
 
 export { createPost, fetchPostByKey, fetchAllPosts, deletePost};
+
