@@ -6,13 +6,21 @@ import { posts } from "./modules/mainpage/datosPosts.js";
 
 import { printTaggedPostList } from "./modules/mainpage/taggedPostList.js";
 
-import { createPostList, printPostCards } from "./modules/mainpage/postCards.js";
+import {
+  createPostList,
+  printPostCards,
+} from "./modules/mainpage/postCards.js";
 
-import { getTopPosts, printTrendingPosts } from "./modules/mainpage/trendingPosts.js";
+import {
+  getTopPosts,
+  printTrendingPosts,
+} from "./modules/mainpage/trendingPosts.js";
 
 import { getRelevantPosts } from "./modules/mainpage/getRelevantPosts.js";
 
 import { getLatestPosts } from "./modules/mainpage/getLatestPosts.js";
+
+import { login } from "./modules/mainpage/LoginPrincipal.js";
 
 //se crea variable token que obtiene el token del local storage
 //let token = localStorage.getItem("token");
@@ -74,9 +82,8 @@ let topPostSorter = document.getElementById("top-post-sorter");
 topPostSorter.addEventListener("click", (event) => {
   event.preventDefault();
   const postList = createPostList(getTopPosts(posts));
-  printPostCards(postList,"post-wrapper");
+  printPostCards(postList, "post-wrapper");
 });
-
 
 let postKeys = Object.keys(posts);
 console.log(postKeys);
@@ -84,8 +91,6 @@ console.log(postKeys);
 let filterInput = document.getElementById("search-bar");
 filterInput.addEventListener("keyup", (event) => {
   let query = event.target.value;
-  
-
 
   /* let result = posts.filter((title) =>
     posts.title.toLowerCase().includes(query.toLowerCase())
