@@ -8,11 +8,11 @@ const sortLatestPosts = (posts) => {
 
 const getLatestPosts = (posts) => {
   let dates = sortLatestPosts(posts);
-  let latestPosts = [];
+  let latestPosts = {};
   for (let date in dates) {
     for (let post in posts) {
       if (posts[post].date === dates[date]) {
-        latestPosts.push(posts[post]);
+        latestPosts[post] = posts[post];
       }
     }
   }
@@ -20,3 +20,5 @@ const getLatestPosts = (posts) => {
 };
 
 export { getLatestPosts };
+
+
