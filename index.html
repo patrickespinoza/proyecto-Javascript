@@ -27,8 +27,10 @@
                 <!-- Contenido dinamico comienza -->
                 <!-- Si el token de localstorage no esta disponible se muestra esto -->
 
-                <a class="btn btn-light mx-1" href="view/LoginForm.html" id="login">Log in</a>
-                <a class="btn btn-outline-primary mx-1" href="view/LoginForm.html" id="create-account-btn">Create account</a
+
+                <a class="btn btn-light mx-1" id="log-in-btn">Log in</a>
+                <a class="btn btn-outline-primary mx-1" id="create-account-btn">Create account</a
+
                
                 <!-- Si el token de localstorage esta disponible se muestra esto  -->
                 <a class="btn btn-outline-primary mx-1" id="create-post-btn">Create post</a>
@@ -43,7 +45,7 @@
             <div class="row">
                 <div class="col-md-3 col-sm-3 d-none d-sm-block">
                     <!-- Esta tarjeta tambien se debe generar de forma dinamica, solo debe aparecer con la verificacion del token de localstorage -->
-                    <div class="card" id="loginright">
+                    <div class="card" id="login-card">
                    
                         <div class="card-body">
                             <h5>
