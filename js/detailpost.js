@@ -27,7 +27,7 @@ const printPostData = async (postKey) => {
     tagDiv.appendChild(tagLink);
     tagWrapper.appendChild(tagDiv);
   });
-
+  document.getElementById("tag-quantity").innerText = `🏷️${tags.length}`;
   document.getElementById("post-author").innerText = author;
   document.getElementById("post-author2").innerText = author;
   document.getElementById("post-date").innerText = date;

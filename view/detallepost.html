@@ -30,7 +30,7 @@
                 <a class="btn btn-light mx-1" id="log-in-btn" href="/view/LoginForm.html">Log in</a>
                 <a class="btn btn-outline-primary mx-1" id="create-account-btn">Create account</a>
                 <!-- Si el token de localstorage esta disponible se muestra esto  -->
-                <a class="btn btn-outline-primary mx-1" href="post.html" id="create-post-btn">Create post</a>
+                <a class="btn btn-outline-primary mx-1" href="../post.html" id="create-post-btn">Create post</a>
                 <a class="nav-link active mx-1" id="alert-bell">&#128276;</a>
                 <img src="../assets/generic-avatar.jpg" alt="" class="rounded-circle mx-1" width="40" height="40"
                     id="user-avatar" />
@@ -44,8 +44,8 @@
                     <!-- Esta tarjeta tambien se debe generar de forma dinamica, solo debe aparecer con la verificacion del token de localstorage -->
                     <div class="d-grid gap-2 p-0 mt-3">
                         <a class="btn btn-light text-start" href="#">❤️ 138</a>
-                        <a class="btn btn-light text-start" href="#">💬22</a>
-                        <a class="btn btn-light text-start" href="#">🏷️12</a>
+                        <a class="btn btn-light text-start" href="#">💬 5</a>
+                        <a class="btn btn-light text-start" href="#" id="tag-quantity"></a>
                         <a class="btn btn-light text-start" href="#">...</a>
 
                     </div>
@@ -128,19 +128,90 @@
                     <div class="card mb-3">
                         <div class="card-body">
                             <h4 class="top comennts ">Top comments (1)</h4>
-                            <div class="d-flex">
+                            <div class="author-box">
                                 <img src="../assets/generic-avatar.jpg" alt="" class="rounded-circle  me-3" width="40"
                                     height="40" />
 
                                 <div class="d-flex flex-column">
-                                    <a class="card-subtitle mb-2 text-muted text-start">Author</a>
-                                    <a class="">date</a>
+                                    <h6><a class="card-subtitle mb-2 text-muted text-start">El comentador</a></h6>
+                                    <p>2024-05-06</a>
                                 </div>
                             </div>
                             <p>
-                                description, se genera dinamicamente a partir de la
-                                informacion de la base de datos, se muestran 5 items por
-                                tarjeta y se muestran dos tarjetas en este aside derecho
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur hic possimus optio deserunt est dolorum eius, ab ipsum voluptatem porro magni quod? Fugiat aliquam est quia dolores officia blanditiis praesentium!
+                            </p>
+
+                            <div class="d-flex">
+                                <a class="btn btn-light">❤️ 4 likes</a>
+                                <a class="btn btn-light">💬 reply</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h4 class="top comennts ">Other comments(4)</h4>
+                            <div class="author-box">
+                                <img src="../assets/generic-avatar.jpg" alt="" class="rounded-circle  me-3" width="40"
+                                    height="40" />
+
+                                <div class="d-flex flex-column">
+                                    <h6><a class="card-subtitle mb-2 text-muted text-start">El comentador</a></h6>
+                                    <p>2024-05-06</a>
+                                </div>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur hic possimus optio deserunt est dolorum eius, ab ipsum voluptatem porro magni quod? Fugiat aliquam est quia dolores officia blanditiis praesentium!
+                            </p>
+
+                            <div class="d-flex">
+                                <a class="btn btn-light">❤️ 4 likes</a>
+                                <a class="btn btn-light">💬 reply</a>
+                            </div>
+                            <div class="author-box">
+                                <img src="../assets/generic-avatar.jpg" alt="" class="rounded-circle  me-3" width="40"
+                                    height="40" />
+
+                                <div class="d-flex flex-column">
+                                    <h6><a class="card-subtitle mb-2 text-muted text-start">El comentador</a></h6>
+                                    <p>2024-05-06</a>
+                                </div>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur hic possimus optio deserunt est dolorum eius, ab ipsum voluptatem porro magni quod? Fugiat aliquam est quia dolores officia blanditiis praesentium!
+                            </p>
+
+                            <div class="d-flex">
+                                <a class="btn btn-light">❤️ 4 likes</a>
+                                <a class="btn btn-light">💬 reply</a>
+                            </div>
+                            <div class="author-box">
+                                <img src="../assets/generic-avatar.jpg" alt="" class="rounded-circle  me-3" width="40"
+                                    height="40" />
+
+                                <div class="d-flex flex-column">
+                                    <h6><a class="card-subtitle mb-2 text-muted text-start">El comentador</a></h6>
+                                    <p>2024-05-06</a>
+                                </div>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur hic possimus optio deserunt est dolorum eius, ab ipsum voluptatem porro magni quod? Fugiat aliquam est quia dolores officia blanditiis praesentium!
+                            </p>
+
+                            <div class="d-flex">
+                                <a class="btn btn-light">❤️ 4 likes</a>
+                                <a class="btn btn-light">💬 reply</a>
+                            </div>
+                            <div class="author-box">
+                                <img src="../assets/generic-avatar.jpg" alt="" class="rounded-circle  me-3" width="40"
+                                    height="40" />
+
+                                <div class="d-flex flex-column">
+                                    <h6><a class="card-subtitle mb-2 text-muted text-start">El comentador</a></h6>
+                                    <p>2024-05-06</a>
+                                </div>
+                            </div>
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur hic possimus optio deserunt est dolorum eius, ab ipsum voluptatem porro magni quod? Fugiat aliquam est quia dolores officia blanditiis praesentium!
                             </p>
 
                             <div class="d-flex">
