@@ -58,13 +58,13 @@
                     <div class="row g-3">
 
                       <div class="col">
-                        <input type="number" class="form-control" aria-label="Rating" name="rating"
+                        <input type="number" class="form-control" aria-label="Rating" name="post-rating"
                           placeholder="Rating">
                       </div>
                       <div class="col">
                         <div class="d-grid gap-2">
-                          <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-                          <label class="btn btn-outline-primary" for="btncheck1">Relevante?</label>
+                          <input type="checkbox" class="btn-check" id="relevant-checkbox" autocomplete="off">
+                          <label class="btn btn-outline-primary" for="relevant-checkbox">Relevante?</label>
                         </div>
                       </div>
                     </div>
@@ -94,7 +94,7 @@
                 <textarea class="form-control" name="post-content" rows="3" required></textarea>
               </div>
               <div class="d-grid gap-2 col-6 mx-auto">
-                <button type="button" class="btn btn-primary">Create post</button>
+                <button type="button" class="btn btn-primary" id="create-post-btn">Create post</button>
               </div>
               </form>
             </div>
