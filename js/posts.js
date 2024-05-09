@@ -33,19 +33,24 @@ let sadInput = document.querySelector("input[name='Sad']");
 let contentInpunt = document.querySelector("textarea[name='post-content']");
 let createPostButton = document.getElementById("create-post-btn");
 
-createPostButton.addEventListener("click", (event) => {
+createPostButton.addEventListener("click", async (event) => {
     event.preventDefault();
-    console.log(tags);
-    console.log(titleInput.value);
-    console.log(descriptionInput.value);
-    console.log(imageInput.value);
-    console.log(authorInput.value);
-    console.log(dateInput.value);
-    console.log(ratingInput.value);
-    console.log(relevantCheckbox.checked);
-    console.log(likesInput.value);
-    console.log(dislikesInput.value);
-    console.log(wowInput.value);
-    console.log(sadInput.value);
+    postObject.title = titleInput.value;
+    postObject.description = descriptionInput.value;
+    postObject.image = imageInput.value;
+    postObject.author = authorInput.value;
+    tags = [] ? postObject.tags = tags : postObject.tags = ["general"];
+    dateInput.value === "" ? postObject.date = dateInput.value: postObject.date = new Date().toLocaleDateString();
+    postObject.rating = ratingInput.value;
+    postObject.relevant = relevantCheckbox.value;
+    postObject["reactions"] = {
+        likes: likesInput.value,
+        dislikes: dislikesInput.value,
+        wow: wowInput.value,
+        sad: sadInput.value
+    };
+    postObject.content = contentInpunt.value;
+    await createPost(postObject);
+    window.open("mainpage.html", "_self");
 
 });

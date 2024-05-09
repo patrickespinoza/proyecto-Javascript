@@ -5,15 +5,15 @@ const createTagButton = (tag) => {
     return button;
   };
   
-  const capitalizeLetter = (string) => {
+/*   const capitalizeLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
-  };
+  }; */
   
   const printTagButtons = (tags, wrapperId) => {
     let wrapper = document.getElementById(wrapperId);
     wrapper.innerHTML = "";
     tags.forEach((tag) => {
-      let button = createTagButton(capitalizeLetter(tag));
+      let button = createTagButton(tag);
       wrapper.append(button);
     });
   };
