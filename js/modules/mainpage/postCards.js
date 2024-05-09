@@ -127,7 +127,6 @@ let createFirstPostCard = (post) => {
     postFooter2.appendChild(bookmarkDiv);
     cardBody.appendChild(postFooter2);
     card.appendChild(cardBody);
-    console.log(card);
     return card;  
 
 }
