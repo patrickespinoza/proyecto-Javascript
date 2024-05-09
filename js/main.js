@@ -8,15 +8,6 @@ let posts = await fetchAllPosts();
 import { printTaggedPostList, filterByTag } from "./modules/mainpage/taggedPostList.js";
 
 
-import {
-  createPostList,
-  printPostCards,
-} from "./modules/mainpage/postCards.js";
-
-import {
-  getTopPosts,
-  printTrendingPosts,
-} from "./modules/mainpage/trendingPosts.js";
 
 import { createPostList, printPostCards} from "./modules/mainpage/postCards.js";
 
@@ -76,12 +67,6 @@ latestPostSorter.addEventListener("click", (event) => {
 let topPostSorter = document.getElementById("top-post-sorter");
 topPostSorter.addEventListener("click", (event) => {
   event.preventDefault();
-  const postList = createPostList(getTopPosts(posts));
-  printPostCards(postList, "post-wrapper");
-});
-
-let postKeys = Object.keys(posts);
-console.log(postKeys);
   const postList = createPostList(sortPostsByRating(posts));
   printPostCards(postList,"post-wrapper");
 });
@@ -101,13 +86,16 @@ filterInput.addEventListener("keyup", (event) => {
   let query = event.target.value;
   let postList = createPostList(posts);
   let result = postList.filter((post) => post.title.toLowerCase().includes(query.toLowerCase()));
- 
+  
+
+
   /* let result = posts.filter((title) =>
     posts.title.toLowerCase().includes(query.toLowerCase())
   );
  */
   printPostCards(result, "post-wrapper");
 });
+
 
 
 
