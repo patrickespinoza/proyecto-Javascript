@@ -1,10 +1,10 @@
 
 
-import {loginPostButtonsRenderDetail} from "../js/modules/mainpage/detectLogin.js";
+import { loginPostButtonsRenderDetail } from "../js/modules/mainpage/detectLogin.js";
 
-import { fetchPostByKey } from "../js/modules/databaseApi.js";
+import { fetchPostByKey, fetchAllPosts } from "../js/modules/databaseApi.js";
 
-import {renderPostsByAuthor} from "../js/modules/postDetail/getPostsbyAuthor.js"
+import { renderPostsByAuthor } from "../js/modules/postDetail/getPostsbyAuthor.js"
 
 let token = localStorage.getItem("token");
 
@@ -23,7 +23,7 @@ const params = new URLSearchParams(new URL(url).search);
 //extraer params
 let postKey = params.get("key");
 
-
+let posts = await fetchAllPosts();
 
 const printPostData = async (postKey) => {
   let postData = await fetchPostByKey(postKey);
@@ -44,7 +44,8 @@ const printPostData = async (postKey) => {
   document.getElementById("post-title").innerText = title;
   document.getElementById("post-content").innerText = content;
   document.getElementById("post-picture").setAttribute("src", image);
-  renderPostsByAuthor(postData, author, "posts-by-author-wrapper");
+
+  renderPostsByAuthor(posts, author, "posts-by-author-wrapper");
 };
 
 await printPostData(postKey);

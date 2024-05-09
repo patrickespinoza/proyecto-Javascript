@@ -1,10 +1,10 @@
+import { createPostList } from '../mainpage/postCards.js';
+
 const getPostsByAuthor = (posts, author) => {
-    let keys = Object.keys(posts);
-    let postsArray = keys.map((key) => ({ ...posts[key], key }));
+    let postsArray = createPostList(posts);
     let postsByAuthor = postsArray.filter((post) => post.author === author);
     return postsByAuthor;
 }
-
 /* 
 
 <h4>more from <a href="">author</a></h4>
@@ -18,18 +18,27 @@ const getPostsByAuthor = (posts, author) => {
 */
 
 const renderPostsByAuthor = (posts, author, wrapperID) => {
-
-    let { tags } = posts;
+    let postsArray = createPostList(posts);
     let postsByAuthor = getPostsByAuthor(posts, author);
     let wrapper = document.getElementById(wrapperID);
     let authorTitle = document.createElement('h4');
-    authorTitle.innerText = `More from`;
+    authorTitle.innerText = `More from `;
     let authorNameLink = document.createElement('a');
     authorNameLink.setAttribute('href', `../mainpage.html?author=${author}`);
     authorNameLink.innerText = author;
     authorTitle.appendChild(authorNameLink);
     wrapper.appendChild(authorTitle);
-    
+    let postsWrapper = document.createElement('div');
+    postsByAuthor.forEach((post) => {
+        console.log(post.tags);
+        console.log(post.title)
+        let postLink = document.createElement('a');
+        postLink.setAttribute('href', `../postDetail.html?key=${post.key}`);
+        postLink.innerText = post.title;
+        postsWrapper.append(postLink);
+    });
+    wrapper.appendChild(postsWrapper)
+
 }
 
-export{renderPostsByAuthor}
+export { renderPostsByAuthor }

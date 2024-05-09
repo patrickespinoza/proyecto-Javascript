@@ -1,6 +1,6 @@
 import { loginPostButtonsRender } from "./modules/mainpage/detectLogin.js";
 
-import { renderPopularTags , getTagList } from "./modules/mainpage/printPopularTags.js";
+import { renderPopularTags, getTagList } from "./modules/mainpage/printPopularTags.js";
 
 //import { posts } from "./modules/mainpage/datosPosts.js";
 let posts = await fetchAllPosts();
@@ -9,7 +9,7 @@ import { printTaggedPostList, filterByTag } from "./modules/mainpage/taggedPostL
 
 
 
-import { createPostList, printPostCards} from "./modules/mainpage/postCards.js";
+import { createPostList, printPostCards } from "./modules/mainpage/postCards.js";
 
 import { getTopPosts, printTrendingPosts, sortPostsByRating } from "./modules/mainpage/trendingPosts.js";
 
@@ -21,7 +21,7 @@ import { getLatestPosts } from "./modules/mainpage/getLatestPosts.js";
 
 import { login } from "./modules/mainpage/LoginPrincipal.js";
 
-import { createPost, fetchPostByKey, fetchAllPosts, deletePost}  from "./modules/databaseApi.js";
+import { createPost, fetchPostByKey, fetchAllPosts, deletePost } from "./modules/databaseApi.js";
 
 
 //se crea variable token que obtiene el token del local storage
@@ -74,7 +74,7 @@ let topPostSorter = document.getElementById("top-post-sorter");
 topPostSorter.addEventListener("click", (event) => {
   event.preventDefault();
   const postList = createPostList(sortPostsByRating(posts));
-  printPostCards(postList,"post-wrapper");
+  printPostCards(postList, "post-wrapper");
 });
 
 let filterByTagInput = document.querySelectorAll('[href^="?tag="]');
@@ -92,7 +92,7 @@ filterInput.addEventListener("keyup", (event) => {
   let query = event.target.value;
   let postList = createPostList(posts);
   let result = postList.filter((post) => post.title.toLowerCase().includes(query.toLowerCase()));
-  
+
 
 
   /* let result = posts.filter((title) =>
@@ -101,7 +101,6 @@ filterInput.addEventListener("keyup", (event) => {
  */
   printPostCards(result, "post-wrapper");
 });
-
 
 
 
