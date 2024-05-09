@@ -30,4 +30,4 @@ const renderPopularTags = (posts) => {
     });
 }
 
-export {renderPopularTags}
+export {renderPopularTags, getTagList}

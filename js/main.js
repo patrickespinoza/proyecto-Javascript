@@ -1,6 +1,6 @@
 import { loginPostButtonsRender } from "./modules/mainpage/detectLogin.js";
 
-import { renderPopularTags } from "./modules/mainpage/printPopularTags.js";
+import { renderPopularTags , getTagList } from "./modules/mainpage/printPopularTags.js";
 
 //import { posts } from "./modules/mainpage/datosPosts.js";
 let posts = await fetchAllPosts();
@@ -49,8 +49,9 @@ loginPostButtonsRender(token);
 // despues se renderiza el segundo elemento dinamico, la lista de tags
 renderPopularTags(posts);
 //despues se renderiza el aside derecho
-printTaggedPostList("WebDevelopment", posts, "random-tag-1");
-printTaggedPostList("Backend", posts, "random-tag-2");
+
+printTaggedPostList(getTagList(posts)[Math.floor(Math.random() * (getTagList(posts).length - 0 + 1)) + 0], posts, "random-tag-1");
+printTaggedPostList(getTagList(posts)[Math.floor(Math.random() * (getTagList(posts).length - 0 + 1)) + 0], posts, "random-tag-2");
 printTrendingPosts(posts, "trending-post-wrapper");
 
 //se convierte el objeto posts en un array de posts
