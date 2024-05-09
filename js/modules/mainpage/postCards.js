@@ -4,7 +4,7 @@
         class="card-img-top object-fit-cover" height="240px"="..." />
     <div class="card-body">
         <div class="author-box">
-            <img src="assets/generic-avatar.jpg" />
+            <img src="assets/generic-avatar.png" />
             <div>
                 <span>
                     <h6><a href="">Author</a></h6>
@@ -57,7 +57,7 @@ let createFirstPostCard = (post) => {
     let authorBox = document.createElement("div");
     authorBox.classList.add("author-box");
     let authorImage = document.createElement("img");
-    authorImage.setAttribute("src", "assets/generic-avatar.jpg");
+    authorImage.setAttribute("src", "assets/generic-avatar.png");
     authorBox.appendChild(authorImage);
     let authorInfo = document.createElement("div");
     let authorFormat = document.createElement("h6");
@@ -144,7 +144,7 @@ let createOtherPostCards = (post) => {
     let authorBox = document.createElement("div");
     authorBox.classList.add("author-box");
     let authorImage = document.createElement("img");
-    authorImage.setAttribute("src", "assets/generic-avatar.jpg");
+    authorImage.setAttribute("src", "assets/generic-avatar.png");
     authorBox.appendChild(authorImage);
     let authorInfo = document.createElement("div");
     let authorFormat = document.createElement("h6");
