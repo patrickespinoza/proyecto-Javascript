@@ -68,7 +68,6 @@ let filterByTagInput = document.querySelectorAll('[href^="?tag="]');
 filterByTagInput.forEach((tag) => {
   tag.addEventListener("click", (event) => {
     event.preventDefault();
-    console.log("click");
     let tag = event.target.textContent.slice(1);
     let filteredPosts = filterByTag(tag, posts);
     printPostCards(filteredPosts, "post-wrapper");
@@ -101,4 +100,14 @@ Regreso la lista de posts filtrados
 
 */
 
-printPostCards(createPostList(posts), "post-wrapper")
+printPostCards(createPostList(posts), "post-wrapper");
+
+let postTagInputTags = document.querySelectorAll('.post-footer a, [href^="?tag="]');
+postTagInputTags.forEach((tag) => {
+  tag.addEventListener("click", (event) => {
+    event.preventDefault();
+    let tag = event.target.textContent.slice(1);
+    let filteredPosts = filterByTag(tag, posts);
+    printPostCards(filteredPosts, "post-wrapper");
+  });
+});
