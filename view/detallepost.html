@@ -7,45 +7,47 @@
     <title id="page-title">Dev community</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="../css/main.css" />
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-background-light mb-2 sticky-top">
         <div class="container-fluid">
-            <img src="assets/logo.png" class="me-2" width="50" height="40" />
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+            <a href="../mainpage.html"><img src="../assets/logo.png" class="me-2" width="50" height="40" />
+                <form class="d-flex" role="search">
+            </a>
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="search-bar" />
             </form>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria 1-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="post-login-buttons"></ul>
                 <!-- Contenido dinamico comienza -->
                 <!-- Si el token de localstorage no esta disponible se muestra esto -->
-                <a id="login" class="btn btn-light mx-1">Log in</a>
-                <a class="btn btn-outline-primary mx-1">Create account</a>
+                <a class="btn btn-light mx-1" id="log-in-btn" href="/view/LoginForm.html">Log in</a>
+                <a class="btn btn-outline-primary mx-1" id="create-account-btn">Create account</a>
                 <!-- Si el token de localstorage esta disponible se muestra esto  -->
-                <a class="btn btn-outline-primary mx-1">Create post</a>
-                <a class="nav-link active mx-1">&#128276;</a>
-                <img src="assets/generic-avatar.jpg" alt="" class="rounded-circle mx-1" width="40" height="40" />
+                <a class="btn btn-outline-primary mx-1" href="post.html" id="create-post-btn">Create post</a>
+                <a class="nav-link active mx-1" id="alert-bell">&#128276;</a>
+                <img src="../assets/generic-avatar.jpg" alt="" class="rounded-circle mx-1" width="40" height="40"
+                    id="user-avatar" />
             </div>
         </div>
     </nav>
     <main>
         <div class="container-fluid gap-3">
             <div class="row">
-                <div class="col-md-3 col-sm-3 d-none d-sm-block">
+                <div class="col-md-1 col-sm-1 d-none d-sm-block">
                     <!-- Esta tarjeta tambien se debe generar de forma dinamica, solo debe aparecer con la verificacion del token de localstorage -->
                     <div class="d-grid gap-2 p-0 mt-3">
                         <a class="btn btn-light text-start" href="#">❤️ 138</a>
                         <a class="btn btn-light text-start" href="#">💬22</a>
                         <a class="btn btn-light text-start" href="#">🏷️12</a>
                         <a class="btn btn-light text-start" href="#">...</a>
-                
+
                     </div>
                 </div>
 
@@ -62,19 +64,42 @@
                 - tiempo estimado de lectura
                 - boton de bookmark
                 -->
-                <div class="col-md-6 col-sm-9">
-                    <div class="card mb-3">
+                <div class="col-md-8 col-sm-9">
+                    <div class="card mb-3"><a href=""><img
+                                class="card-img-top object-fit-cover" id="post-picture" height="500px" src=""></a>
+                        <div class="card-body">
+                            <div class="author-box"><img src="../assets/generic-avatar.jpg">
+                                <div>
+                                    <h6><span><a href="" id="post-author"></a></span></h6>
+                                    <p><a href="" id ="post-date"></a></p>
+                                </div>
+                            </div>
+                            <div class="post-title"><a href="" id="post-title"></a></div>
+                            <div><p id="post-content">
+
+                            </p></div>
+                            <div class="post-footer" id="tag-wrapper">
+                            </div>
+                            <div class="post-footer">
+                                <div><a href="">💓10 reactions</a></div>
+                                <div><a href="">5 comments</a></div><span><a
+                                        href="">4 minute read</a></span>
+                                <div><a><img src="../assets/bookmark.svg" alt="Bookmark"></a></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="card mb-3">
                         <img id="post-picture"
-                        src="https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fw19259c6raar2ple6904.png"
+                            src="https://media.dev.to/cdn-cgi/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fw19259c6raar2ple6904.png"
                             class="card-img-top" alt="..." />
                         <div class="card-body">
                             <div class="d-flex">
-                                <img id="post-imgAuthor" 
-                                src="assets/generic-avatar.jpg" alt="" class="rounded-circle  me-3" width="40"
-                                    height="40" />
+                                <img id="post-imgAuthor" src="assets/generic-avatar.jpg" alt=""
+                                    class="rounded-circle  me-3" width="40" height="40" />
 
                                 <div class="d-flex flex-column">
-                                    <a class="card-subtitle mb-2 text-muted text-start" id ="post-author">Author</a>
+                                    <a class="card-subtitle mb-2 text-muted text-start" id="post-author">Author</a>
                                     <a class="" id="post-date">date</a>
                                 </div>
                             </div>
@@ -86,7 +111,7 @@
                             <a class="card-title post-title " id="post-title">Post title</a>
                             <div class="d-flex">
                                 <a class="btn btn-light" id="tag1">tag 1</a>
-                                <a class="btn btn-light"id="tag2">tag 2</a>
+                                <a class="btn btn-light" id="tag2">tag 2</a>
                                 <a class="btn btn-light" id="tag3">tag 3</a>
                             </div>
                             <div class="d-flex flex-column">
@@ -99,12 +124,12 @@
                                 </p>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="card mb-3">
                         <div class="card-body">
                             <h4 class="top comennts ">Top comments (1)</h4>
-                            <div class="d-flex"> 
-                                <img src="assets/generic-avatar.jpg" alt="" class="rounded-circle  me-3" width="40"
+                            <div class="d-flex">
+                                <img src="../assets/generic-avatar.jpg" alt="" class="rounded-circle  me-3" width="40"
                                     height="40" />
 
                                 <div class="d-flex flex-column">
@@ -117,14 +142,14 @@
                                 informacion de la base de datos, se muestran 5 items por
                                 tarjeta y se muestran dos tarjetas en este aside derecho
                             </p>
-                            
+
                             <div class="d-flex">
                                 <a class="btn btn-light">❤️ 4 likes</a>
                                 <a class="btn btn-light">💬 reply</a>
                             </div>
                         </div>
                     </div>
-                 
+
 
 
 
@@ -134,21 +159,17 @@
                 <div class="col-md-3 d-none d-md-block">
                     <div class="card tag-wrapper" id="tag-wrapper-1">
                         <div class="card-body">
+                            <div class="author-box"><img src="../assets/generic-avatar.jpg">
+                                <div>
+                                    <h6 id="post-author2"><span><a  href="" ></a></span></h6>
+                                </div>
+                            </div>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item">
-                                    <div class="d-flex">
-                                        <img src="assets/generic-avatar.jpg" alt="" class="rounded-circle  me-3" width="40"
-                                            height="40" />
-        
-                                        <div class="d-flex flex-column">
-                                            <h4>Name author</h4>
-                                        </div>
-                                    </div>
-                                    <button class="Subscribe">Subscribe</button>
+                                    
+                                    <div class="text-center"><button class="btn btn-outline-primary">Subscribe</button></div>
                                     <p>
-                                        description, se genera dinamicamente a partir de la
-                                        informacion de la base de datos, se muestran 5 items por
-                                        tarjeta y se muestran dos tarjetas en este aside derecho
+                                        Este autor es muy bueno
                                     </p>
                                     <h6>LOCATION</h6>
                                     <p>Monterrey, Nuevo Leon, Mx</p>
@@ -161,26 +182,6 @@
                                     <h6>JOINED</h6>
                                     <p>March 19, 2024</p>
                                 </li>
-                                <li class="list-group-item">
-                                    <a href="">tagged post title 1</a>
-                                    <p>${numero} comentarios</p>
-                                </li>
-                                <li class="list-group-item">
-                                    <a href="">tagged post title 2</a>
-                                    <p>${numero} comentarios</p>
-                                </li>
-                                <li class="list-group-item">
-                                    <a href="">tagged post title 3</a>
-                                    <p>${numero} comentarios</p>
-                                </li>
-                                <li class="list-group-item">
-                                    <a href="">tagged post title 4</a>
-                                    <p>${numero} comentarios</p>
-                                </li>
-                                <li class="list-group-item">
-                                    <a href="">tagged post title 5</a>
-                                    <p>${numero} comentarios</p>
-                                </li>
                             </ul>
                         </div>
                     </div>
@@ -192,7 +193,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script src="/js/LoginPrincipal.js"></script>
+    <script src="../js/detailpost.js" type="module"></script>
 </body>
 
 </html>

@@ -1,29 +1,39 @@
-//para extraer paraametros de la url
-const url = window.location.href
+
+
+import {loginPostButtonsRenderDetail} from "../js/modules/mainpage/detectLogin.js";
+
+let token = localStorage.getItem("token");
+
+loginPostButtonsRenderDetail(token);
+
+import { fetchPostByKey } from "../js/modules/databaseApi.js";
+const url = window.location.href;
 //instancia url
-const params= new URLSearchParams(new URL(url).search)
+const params = new URLSearchParams(new URL(url).search);
 //extraer params
-let postKey = params.get("postKey")
+let postKey = params.get("key");
 
 
-const BASE_URL = "https://kodemia33jsluis-default-rtdb.firebaseio.com/-NxMBmOyF4ljPkmbcTQT";
 
-const fetchPostByKey = async (postKey) => {
-    let response = await fetch(`${BASE_URL}/${postKey}/.json`);
-    let data = await response.json();
-    return data;
-  };
+const printPostData = async (postKey) => {
+  let postData = await fetchPostByKey(postKey);
+  let { title, key, description, content, image, author, tags, date, reactions, rating, relevant } = postData;
+  let tagWrapper = document.getElementById("tag-wrapper");
+  tags.forEach((tag) => {
+    let tagLink = document.createElement("a");
+    tagLink.setAttribute("href", `../mainpage.html?tag=${tag}`);
+    tagLink.textContent = `#${tag}`;
+    let tagDiv = document.createElement("div");
+    tagDiv.appendChild(tagLink);
+    tagWrapper.appendChild(tagDiv);
+  });
 
-const printPostData = async (postKey)=> {
-    let postData = await fetchPostByKey(postKey)
-    console.log(postData)
-    let { title, description, image, author, tags, date, reactions,}= postData
+  document.getElementById("post-author").innerText = author;
+  document.getElementById("post-author2").innerText = author;
+  document.getElementById("post-date").innerText = date;
+  document.getElementById("post-title").innerText = title;
+  document.getElementById("post-content").innerText = content;
+  document.getElementById("post-picture").setAttribute("src", image);
+};
 
-    document.getElementById("post-author").innerText = author
-    document.getElementById("post-date").innerText = date
-    document.getElementById("post-title").innerText = title
-    document.getElementById("post-content").innerText = description
-    document.getElementById("post-picture").setAttribute("src", image)
-}
-
-printPostData(postKey)
+await printPostData(postKey);

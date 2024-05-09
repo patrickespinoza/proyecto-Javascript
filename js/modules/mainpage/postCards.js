@@ -127,6 +127,7 @@ let createFirstPostCard = (post) => {
     postFooter2.appendChild(bookmarkDiv);
     cardBody.appendChild(postFooter2);
     card.appendChild(cardBody);
+    console.log(card);
     return card;  
 
 }
@@ -134,7 +135,7 @@ let createFirstPostCard = (post) => {
 let createOtherPostCards = (post) => {
     let { title, key, description, image, author, tags, date, reactions, rating, relevant } = post;
     
-    const keyURL = `./views/detail.html?key=${key}`
+    const keyURL = `./view/detallepost.html?key=${key}`
     
     let card = document.createElement("div");
     card.classList.add("card", "mb-3");

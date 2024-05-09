@@ -1,5 +1,5 @@
 
-const BASE_URL = "https://kodemia33jsluis-default-rtdb.firebaseio.com/-NxMBmOyF4ljPkmbcTQT";
+const BASE_URL = "https://kodemia33jsluis-default-rtdb.firebaseio.com/-NxQ29ahSiYSJaWwC0T7";
 
 const createPost = async (postObject) => {
   let response = await fetch(`${BASE_URL}/.json`, {
