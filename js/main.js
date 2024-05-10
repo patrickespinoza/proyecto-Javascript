@@ -13,10 +13,9 @@ const params = new URLSearchParams(new URL(url).search);
 //extraer params
 let tag = params.get("tag");
 
-console.log(tag)
 
 let filteredPosts = filterByTag(tag, posts);
-console.log(filteredPosts)
+
 
 import { createPostList, printPostCards } from "./modules/mainpage/postCards.js";
 
