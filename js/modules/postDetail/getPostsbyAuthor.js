@@ -32,7 +32,7 @@ const renderPostsByAuthor = (posts, author, wrapperID) => {
         console.log(post.tags);
         console.log(post.title)
         let postLink = document.createElement('a');
-        postLink.setAttribute('href', `../postDetail.html?key=${post.key}`);
+        postLink.setAttribute('href', `?key=${post.key}`);
         postLink.innerText = post.title;
         postsWrapper.append(postLink);
         let textfill = ""
