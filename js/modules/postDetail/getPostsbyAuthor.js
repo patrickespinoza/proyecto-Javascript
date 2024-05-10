@@ -18,7 +18,6 @@ const getPostsByAuthor = (posts, author) => {
 */
 
 const renderPostsByAuthor = (posts, author, wrapperID) => {
-    let postsArray = createPostList(posts);
     let postsByAuthor = getPostsByAuthor(posts, author);
     let wrapper = document.getElementById(wrapperID);
     let authorTitle = document.createElement('h4');
@@ -36,6 +35,17 @@ const renderPostsByAuthor = (posts, author, wrapperID) => {
         postLink.setAttribute('href', `../postDetail.html?key=${post.key}`);
         postLink.innerText = post.title;
         postsWrapper.append(postLink);
+        let textfill = ""
+        post.tags.forEach((tag) => {
+            textfill = textfill + "#" + tag + " ";
+        });
+        let tagContainer = document.createElement('div');
+        let tagLink = document.createElement('a');
+        tagLink.setAttribute('href', "");
+        tagLink.innerText = textfill;
+        tagContainer.appendChild(tagLink);
+        postsWrapper.appendChild(tagContainer);
+
     });
     wrapper.appendChild(postsWrapper)
 
