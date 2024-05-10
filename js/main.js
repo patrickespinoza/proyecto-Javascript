@@ -7,7 +7,16 @@ let posts = await fetchAllPosts();
 //ya toma los datos de la base de datos ya no del dummy
 import { printTaggedPostList, filterByTag } from "./modules/mainpage/taggedPostList.js";
 
+const url = window.location.href;
+//instancia url
+const params = new URLSearchParams(new URL(url).search);
+//extraer params
+let tag = params.get("tag");
 
+console.log(tag)
+
+let filteredPosts = filterByTag(tag, posts);
+console.log(filteredPosts)
 
 import { createPostList, printPostCards } from "./modules/mainpage/postCards.js";
 
@@ -126,5 +135,6 @@ postTagInputTags.forEach((tag) => {
     printPostCards(filteredPosts, "post-wrapper");
   });
 });
-printPostCards(createPostList(posts), "post-wrapper");
+tag === null ? printPostCards(createPostList(posts), "post-wrapper") : printPostCards(filteredPosts, "post-wrapper");
+
 
