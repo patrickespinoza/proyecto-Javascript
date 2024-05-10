@@ -28,6 +28,7 @@ import { createPost, fetchPostByKey, fetchAllPosts, deletePost } from "./modules
 let token = localStorage.getItem("token");
 //const token = false; // Token simulado para propositos de prueba
 
+
 let logOutButton = document.getElementById("log-out-btn");
 logOutButton.addEventListener("click", (event) => {
   event.preventDefault();
